@@ -1,0 +1,16 @@
+.ButtonCmp,
+.ButtonCmp:hover,
+.ButtonCmp:active,
+.ButtonCmp:focus,
+.ButtonCmp:active:focus {
+  background: #565656;
+  border: 1pt solid #3A3A3A;
+  border-radius: 0;
+  padding: 3px 21px;
+  height: 29px;
+  color: #fff;
+  font-size: 10pt;
+  font-weight: 200;
+  outline: 0;
+  box-shadow: 0px 0px 5px -3px black;
+}

@@ -1,0 +1,25 @@
+.StatusBox {
+  background: #4C4C4C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+}
+
+.StatusBox svg {
+  width: 95px;
+}
+
+.StatusBox__message {
+  color: #E6E6E6;
+  font-size: 12pt;
+  font-weight: 200;
+  margin-top: 20px;
+  text-align: center;
+  width: 220px;
+}
+
+.StatusBox__message--warning {
+  color: #FBB03B;
+}

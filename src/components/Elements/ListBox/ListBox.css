@@ -1,0 +1,16 @@
+ul.ListBox {
+  list-style: none;
+  padding-left: 0em;
+}
+
+.ListBox > li {
+  border-bottom: 1pt solid black;
+}
+
+.ListBox__BodyItem {
+  background-color: #333333;
+  min-height: 80px;
+}
+.ListBox__BasicItem {
+  padding: 1px 10px;
+}

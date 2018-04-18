@@ -1,0 +1,129 @@
+.CallBox {
+  /*background: #333333;*/
+  min-height: 80px;
+  padding: 7px;
+
+
+}
+
+.CallBox__status,
+.CallBox__detail {
+  display: flex;
+  padding: 10px 15px;
+}
+
+.CallBox__status {
+  padding-bottom: 0;
+  color: white;
+}
+
+.CallBox__detail {
+  padding-top: 0;
+}
+
+.CallBox__status__label,
+.CallBox__status__time {
+  font-weight: 300;
+  font-size: 11pt;
+  margin-left: 5px;
+}
+
+.CallBox__status__icon {
+  margin-right: 10pt;
+}
+
+.CallBox__status__icon,
+.CallBox__status__label {
+  margin-top: 15px;
+}
+
+.CallBox__status__label{
+ margin-left: 0pt;
+}
+.CallBox__status--discando {
+  color: #7BB8EF;
+}
+.CallBox__status--discando svg path{
+  fill: #7BB8EF;
+}
+
+.CallBox__status--hablando {
+  color: #92F70F;
+}
+
+.CallBox__status--wrap-up{
+  color: #FBB03B;
+}
+
+.CallBox__status__time {
+  margin-left: auto;
+}
+
+.CallBox__status__number {
+  color: #B3B3B3;
+  font-size: 12pt;
+  font-weight: 200;
+  line-height: 18pt;
+  margin-left: 28px;
+}
+
+.CallBox__detail__btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: #4D4D4D;
+  border-radius: 50%;
+  margin-left: auto;
+  padding: 8px;
+  text-align: center;
+  display: inline;
+  width: 34px;
+  height: 34px;
+  line-height: 14px;
+}
+
+.CallBox__detail__btn--active {
+  background: #DB463B;
+}
+
+.CallBox__actions {
+  color: white;
+  display: flex;
+}
+
+.CallBox__actions svg {
+  margin-bottom: 5px;
+}
+
+.CallBox__actions__btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: .5px solid #4D4D4D;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 8pt;
+  font-weight: 200;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.CallBox__actions__btn--end {
+  background: #DB463B;
+}
+
+.CallBox__actions__btn--wait {
+  background: #B3B3B3;
+}
+
+.CallBox__actions__btn--continue {
+  background: #8CC63F;
+}
+
+.CallBox__actions__btn--end svg {
+  width: 50px;
+  margin-left: -20px;
+}
