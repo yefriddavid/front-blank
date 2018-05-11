@@ -7,117 +7,35 @@ import { combineReducers } from 'redux'
 
 
 const initial = {
-  access: {
-    data: {},
-    fetching: false,
-    loadedLibrary: false,
-    success: false,
-    pingApiTest: "untested",
-    apiAuthenticationTest: "untested",
-    status: null,
-    //state: "OUT", // [in, out]
-    error: {}
-  },
-  ping: {
-    message: null,
-    response: {},
-    success: false
-  },
-  authtest: {
-    message: null,
-    response: {},
-    success: false
-  },
   login: {
-    data: [],
-    status: null,
-    success: false,
-    entities: {},
-    error: {}
+    payload: [],
+    error: false,
+    errorDetails: {}
   },
 };
 
-const ACCESS = createReducer({
-  [accessActions.request]: (state, payload) => {
-    return { ...state, isFetching: true }
-  },
-  [accessActions.fetch]: (state, payload) => {
-    return { ...state, loadedLibrary: true }
-  },
-  [accessActions.received]: (state, payload) => {
-    return { ...state, isFetching: false, success: true, error: {},
-      status: payload.status,
-      data: payload.data
-    }
-  },
-  [authActions.clear]: (state, payload) => {
-    return initial.access
-  },
-  [accessActions.errorRequest]: (state, payload) => {
-    return { ...state, isFetching: false, data: {}, error: payload }
-  },
-}, initial.access)
-
-const PING = createReducer({
-  [accessActions.pingResponseSuccess]: (state, payload) => {
-    return { ...state, message: "response connected", success: true, response: {} }
-  },
-  [accessActions.beginPing]: (state, payload) => {
-    return { ...state, message: "begin", success: false, response: payload }
-  },
-  [accessActions.pingResponseError]: (state, payload) => {
-    return { ...state, message: "ping error", success: false, response: payload }
-  },
-  [authActions.clear]: (state, payload) => {
-    return initial.ping
-  },
-}, initial.ping)
-
-const AUTHTEST = createReducer({
-  [accessActions.testAuthenticationResponseSuccess]: (state, payload) => {
-    return { ...state, message: "response authenticated", success: true, response: payload }
-  },
-  [accessActions.beginTestAuthentication]: (state, payload) => {
-    return { ...state, message: "begin test", success: false, response: payload }
-  },
-  [accessActions.testAuthenticationResponseError]: (state, payload) => {
-    return { ...state, message: "authentication error", success: false, respose: payload }
-  },
-  [authActions.clear]: (state, payload) => {
-    return initial.authtest
-  },
-}, initial.authtest)
-
-const LOGIN = createReducer({
+const login = createReducer({
   [authActions.request]: (state, payload) => {
-    return { ...state, isFetching: true, success: false }
+    return { ...state, isFetching: true, error: initial.login.error }
   },
   [authActions.received]: (state, payload) => {
     return { ...state,
       isFetching: false,
-      error: {},
-      status: payload.status,
-      //success: true,
-      //data: payload.data
+      error: false,
+      payload: payload,
     }
   },
   [authActions.clear]: (state, payload) => {
     return initial.login
   },
   [authActions.errorRequest]: (state, payload) => {
-    return { ...state, isFetching: false, data: {}, error: payload, success: false }
+    return { ...state, isFetching: false, payload: {}, error: false, errorDetails: payload }
   },
-  /*[authActions.logout]: (state, payload) => {
-    return initial.login
-  },*/
 }, initial.login)
 
 export default combineReducers(
   {
-    access: ACCESS,
-    login: LOGIN,
-    authtest: AUTHTEST,
-    ping: PING
+    login
   }
 );
 

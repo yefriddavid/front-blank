@@ -30,12 +30,13 @@ export function* signin(user, pass, req){
   try{
     yield put(authActions.request())
     const response = yield call(apiServices.signin, user, pass, req)
-    let finishAt = new Date()
+    //let finishAt = new Date()
     let beginAt = new Date()
-    finishAt.setMilliseconds(finishAt.getMilliseconds() + response.data.expires_in)
+    //finishAt.setMilliseconds(finishAt.getMilliseconds() + response.data.expires_in)
+    //finishAt.setSeconds(finishAt.getMilliseconds() + response.data.expires_in)
 
     response.data.beginAt = beginAt
-    response.data.finishAt = finishAt
+    //response.data.finishAt = finishAt
     yield put(authActions.received(response))
     sessionStorage.setDataStorage(response.data)
     return true
