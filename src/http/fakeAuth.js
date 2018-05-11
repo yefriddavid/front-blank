@@ -7,7 +7,7 @@ export const fakeAuth = {
     return AppStorage.loggedIn()
   },
   tokenIsValidDate(){
-    return AppStorage.loggedIn()
+    return AppStorage.fullLoggedIn()
       /*if(this.isAuthenticated()){
       const authData = sessionStorage.getItem(`${config.PREFIX_SESSION_KEYS}.auth`)
       return true

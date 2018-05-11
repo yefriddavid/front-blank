@@ -2,6 +2,7 @@ import { fakeAuth } from '../http/fakeAuth'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import RefreshTokenPage from '../containers/RefreshTokenPageContainer'
 
 
 
@@ -20,8 +21,10 @@ const FriendlyRoutes = ({ component: Component, ...rest }) => {
 
   if(fakeAuth.isAuthenticated()){
     if(fakeAuth.tokenIsValidDate()){
+      //alert("xxxx")
       element = (<Component {...rest} />)
     }else{
+      element = (<RefreshTokenPage />)
       //validar el refresh token
       //this.props.actions.auth.applyRefreshToken()
     }

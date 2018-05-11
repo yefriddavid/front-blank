@@ -1,7 +1,8 @@
 //import Request from '../Request'
-import * as conf from '../config'
+import * as conf from '../../config'
 //import * as apiServices from '../Api'
-import * as sessionStorage from '../SessionStorage'
+import * as sessionStorage from '../../SessionStorage'
+
 
 export const access = (req) => {
    return new Promise((resolve, reject) => {
@@ -23,8 +24,8 @@ export const access = (req) => {
      })
 }
 
-export const refresh = (req) => {
-   return new Promise((resolve, reject) => {
+export const refreshToken = (req) => {
+  return new Promise((resolve, reject) => {
     req.post(
       `/oauth/token`, {
       'grant_type': 'refresh_token',

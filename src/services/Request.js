@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as conf from './config'
-import * as apiProvider from './providers/Api'
+//import * as apiAuthProvider from './providers/Api/Auth'
 import * as sessionStorage from './SessionStorage'
 
 const Request = axios.create({
@@ -33,7 +33,7 @@ Request.interceptors.request.use(async (config) => {
         try{
           await
             //apiServices.refresh(Request)
-             apiProvider.refresh(Request)
+            //apiProvider.refresh(Request)
           alert("allright")
         }catch(ex){
           alert("all bad")

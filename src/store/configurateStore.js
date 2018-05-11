@@ -1,9 +1,10 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import combinedReducers from '../reducers/combinedReducers'
 import createSagaMiddleware from 'redux-saga'
 import sagaMonitor from '../sagas/sagaMonitor'
 import rootSaga from '../sagas/index.js'
 import { loadState, saveState } from './sessionStorage'
+import { routesMiddleware } from '../http/Middlewares/routesMiddleware'
 import { composeWithDevTools } from 'redux-devtools-extension'
 //import { reduxReactRouter } from 'redux-router-dom'
 import createHistory from '../history/browserHistory'
@@ -16,13 +17,18 @@ const composeEnhancers = composeWithDevTools({
 })
 
 
-export default function configureStore() {
+export default function configureStore(initialState, browserHistory) {
+
   const sagaMiddleware = createSagaMiddleware({sagaMonitor})
   const persistedState = loadState()
   const store = createStore(
                           combinedReducers,
                           persistedState,
-                          composeEnhancers(applyMiddleware(sagaMiddleware)),
+compose(
+  applyMiddleware(routesMiddleware),
+  composeEnhancers(applyMiddleware(sagaMiddleware)),
+  //applyMiddleware(sagaMiddleware),
+)
     //                        BrowserRouter({ createHistory })
   );
 

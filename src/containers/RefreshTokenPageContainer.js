@@ -6,17 +6,17 @@ import { bindActionCreators } from 'redux'
 import md5 from "react-native-md5";
 
 
-class LoginPageContainer extends Component {
-  signin(payload){
-
-    const { username, password } = payload
-    //this.props.actions.auth.received()
-    this.props.actions.auth.login({ username, password: md5.hex_md5(password)})
+class RefreshTokenPageContainer extends Component {
+  componentDidMount(){
+    //this.props.actions.auth.applyRefreshToken()
+    this.props.actions.auth.refreshToken()
 
   }
   render() {
     return (
-      <LoginPage {...this.props} onSubmit= { this.signin.bind(this)} />
+      <div>
+        refresh token
+      </div>
     )
   }
 }
@@ -36,7 +36,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPageContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(RefreshTokenPageContainer)
 
 
 

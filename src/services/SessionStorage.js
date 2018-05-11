@@ -32,20 +32,33 @@ export function setDataStorage(data){
   return true
 }
 export const getBeginAt = () => {
-  const { beginAt } = getDataStorage() || { beginAt: false }
-  return beginAt
+  if( loggedIn() === false )
+    return  undefined
+  const { beginAt } = getDataStorage()
+  return new Date(beginAt)
+
 }
-export const getExpiredIn = () => {
-  const { expired_in } = getDataStorage() || { expired_in: false }
-  return expired_in
+export const getExpiresIn = () => {
+  if( loggedIn() === false )
+    return  undefined
+  const { expires_in } = getDataStorage() || { expires_in: 0 }
+  return expires_in
 }
 export const getFinishAt = () => {
   if( loggedIn() === false )
     return  undefined
   else{
     let beginAt = getBeginAt()
-    let finishAt = new Date()
-    finishAt.setSeconds(finishAt.getSeconds() + getExpiredIn())
+    let finishAt = new Date(beginAt)
+
+    //console.log(finishAt)
+    //console.log(beginAt)
+    //console.log(finishAt.getSeconds())
+    //console.log(getExpiresIn())
+    finishAt.setSeconds(finishAt.getSeconds() + getExpiresIn())
+    //finishAt.setSeconds(10)
+    //console.log(finishAt)
+
     return finishAt
   }
 }
@@ -72,9 +85,22 @@ export function fullLoggedIn() {
   if(loggedIn() === true){
     let beginAt = getBeginAt()
     let finishAt = getFinishAt()
-    if(beginAt !== false && finishAt !== false){
-      if(beginAt < finishAt){
+    if(beginAt){
+      //console.log("Begin At", beginAt)
+      //console.log("Current At", new Date())
+      //console.log("Finish At", finishAt)
+      const expires_in = getExpiresIn()
+      const diff = (new Date() - beginAt) / 1000
+      const liveTime = expires_in - diff
+      //console.log(expires_in)
+      //console.log(liveTime)
+      //console.log(diff)
+
+      if(liveTime > 0){
+        //console.log("aun esta vivo")
         return true
+      }else{
+        //console.log("murio el tiempo")
       }
     }
   }
