@@ -11,11 +11,10 @@ export function* signin(user, pass, req){
   try{
     yield put(authActions.request())
     const response = yield call(apiAuthProvider.signin, user, pass, req)
-    let beginAt = new Date()
-
-    response.data.beginAt = beginAt
+    //let beginAt = new Date()
+    //response.data.beginAt = beginAt
     yield put(authActions.received(response))
-    appStorage.setDataStorage(response.data)
+    //appStorage.setDataStorage(response.data)
   } catch (e){
     yield put(authActions.errorRequest(e))
   }

@@ -28,7 +28,7 @@ export const routesMiddleware = store => next => action => {
   console.log(store)
   console.log(next)*/
 
-  console.log(action)
+  //console.log(action)
   return next(action)
 }
 

@@ -2,6 +2,7 @@ import { put, call, take, fork, race, select } from 'redux-saga/effects'
 import * as apiAuth from './Services/Providers/Api/Auth'
 import * as apiServicesProvider from './Services/Providers/Api/Index'
 import * as appStorage from '../services/SessionStorage'
+import AuthLoginResponse from '../http/Middlewares/AuthLoginResponse'
 
 import * as socketActions from '../actions/websocket'
 import * as authActions from '../actions/auth'
@@ -41,10 +42,22 @@ export function* logoutFlow(req) {
   }
 }
 
+export function* onLoginSuccessfull() {
+  while (true) {
+    const { payload } = yield take(`${authActions.errorRequest}`)
+    //alert("mundo")
+    yield call(AuthLoginResponse, payload)
+  }
+}
 
 export default function* root() {
   yield fork(authFlow)
+  yield fork(onLoginSuccessfull)
 
+    /*yield all([
+    take(`${authActions.received}`, AuthLoginResponse),
+    //takeEvery(`${authActions.errorRequest}`, AuthLoginResponse)
+  ])*/
   //  alert("xxzzz")
   if(appStorage.fullLoggedIn()){
     yield fork(logoutFlow, request)
