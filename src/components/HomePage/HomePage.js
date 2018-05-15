@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SelectCmp, ButtonCmp } from "callcenter2_react_components"
+import { ButtonCmp } from "callcenter2_react_components"
 
 // import { ListGroup, ListGroupItem, Grid, Col, Row, ButtonToolbar, Button } from 'react-bootstrap'
 
