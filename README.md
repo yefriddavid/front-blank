@@ -1,6 +1,23 @@
 # Guia
 
 
+
+
+#instalar libreria de componentes microvoz en un proyecto
+
+```
+https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
+npm install microvoz/callcenter2_react_components --save
+git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@github.com:
+
+"dependencies": {
+"GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git"
+}
+
+```
+
+
+
 ### Install create react project
 ```
 npm install create-react-app -g
