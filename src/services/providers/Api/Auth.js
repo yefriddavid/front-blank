@@ -2,9 +2,11 @@
 import * as conf from '../../config'
 //import * as apiServices from '../Api'
 import * as sessionStorage from '../../SessionStorage'
+import req from '../../Request'
+import request from '../../Request'
 
 
-export const access = (req) => {
+export const access = () => {
    return new Promise((resolve, reject) => {
       req.post(`/session/access`, {  },
         {
@@ -24,7 +26,7 @@ export const access = (req) => {
      })
 }
 
-export const refreshToken = (req) => {
+export const refreshToken = () => {
   return new Promise((resolve, reject) => {
     req.post(
       `/oauth/token`, {
@@ -40,15 +42,15 @@ export const refreshToken = (req) => {
       }
     }).then(function (res){
         resolve(res)
-      }).catch(error => {
-          reject(error)
       });
-     })
+    })
 }
 
-export function signin (user, pass, req) {
+export function signin (user, pass) {
+  alert("here, I am!!")
+  console.log(req)
   return new Promise((resolve, reject) => {
-    req.post(`/oauth/token`,
+    request.post(`/oauth/token`,
       {
         username: user,
         password: pass,
@@ -74,7 +76,7 @@ export function signin (user, pass, req) {
   })
 }
 
-export function signout (req) {
+export function signout () {
   return new Promise((resolve, reject) => {
 
     let currentDate = new Date()
@@ -92,7 +94,7 @@ export function signout (req) {
   })
 }
 
-export function scopes (req) {
+export function scopes () {
   return new Promise((resolve, reject) => {
     return req('/oauth/scopes', {
         method: "GET",
@@ -102,21 +104,6 @@ export function scopes (req) {
       })
       .then(response => {
         resolve(response)
-      }).catch(error => {
-          reject(error)
-      })
-  })
-}
-export function ping (req) {
-  return new Promise((resolve, reject) => {
-    return req('/ping', {
-        method: "GET",
-        headers: {
-          'Accept': 'application/json',
-        }
-      })
-      .then(response => {
-        return resolve(true)
       }).catch(error => {
           reject(error)
       })

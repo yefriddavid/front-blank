@@ -11,10 +11,7 @@ export function* signin(user, pass, req){
   try{
     yield put(authActions.request())
     const response = yield call(apiAuthProvider.signin, user, pass, req)
-    //let beginAt = new Date()
-    //response.data.beginAt = beginAt
     yield put(authActions.received(response))
-    //appStorage.setDataStorage(response.data)
   } catch (e){
     yield put(authActions.errorRequest(e))
   }
@@ -30,15 +27,16 @@ export function* signout(req){
   }
 }
 
-export function* refreshToken(req) {
+  /*export function* refreshToken(req) {
   while(true){
     try{
       const { payload } = yield take(`${authActions.refreshToken}`)
+      //console.log("buuuuuuuu")
       const response = yield call(apiAuthProvider.refreshToken, req)
-      yield put(authActions.received())
+      yield put(authActions.receivedRefreshToken())
     } catch (e) {
-      yield put(authActions.errorRequest())
+      yield put(authActions.errorRequestRefreshToken())
     }
   }
-}
+}*/
 

@@ -13,6 +13,7 @@ class RefreshTokenPageContainer extends Component {
 
   }
   render() {
+    console.log(this)
     return (
       <div>
         refresh token

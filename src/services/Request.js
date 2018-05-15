@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as conf from './config'
-//import * as apiAuthProvider from './providers/Api/Auth'
-import * as sessionStorage from './SessionStorage'
+import * as apiAuthProvider from './providers/Api/Auth'
+import * as appStorage from './SessionStorage'
 
 const Request = axios.create({
   baseURL: conf.API_ENDPOINT,
@@ -14,53 +14,25 @@ let refreshSubscribers = []
 
 //Request.defaults.headers.common['Authorization'] = 'Bearer ' + sessionStorage.getAccessToken
 Request.interceptors.request.use(async (config) => {
-    if(sessionStorage.loggedIn()){
-      if(!sessionStorage.fullLoggedIn() && !isOlder){
-        isOlder = true
-        //alert("validare el token")
-          /*new Promise((resolve, reject) => {
-          refresh().then( function(newToken) {
-            setSignData(newToken.data)
-            alert("Resolvimos")
-              isOlder = false
-            resolve(config)
-          }).catch( function(e) {
+  if(appStorage.loggedIn()){
+    if(!appStorage.fullLoggedIn() && !isOlder){
+      isOlder = true
+      try{
+        const response = await
+          apiAuthProvider.refreshToken(Request)
 
-          })
-        })*/
+        appStorage.setSessionInfoData(response.data)
+      }catch(ex){
+        alert("all bad")
 
-        //const response = await
-        try{
-          await
-            //apiServices.refresh(Request)
-            //apiProvider.refresh(Request)
-          alert("allright")
-        }catch(ex){
-          alert("all bad")
-
-        }
       }
     }
-  //config.headers = [...config.headers, sessionStorage.getHeaders() ]
-  const headers = sessionStorage.getHeaders()
-  //console.log("-----------------", headers)
+  }
+  const headers = appStorage.getHeaders()
   config.headers["Authorization"] = headers["Authorization"]
-  //config.headers.push(...headers)
-    /*headers.forEach(function(element) {
-  console.log("---------------------------->", element)
-  config.headers[]
-
-});*/
-
-  //alert("444")
-  //console.log("===================", config)
-    return config
-  //}else
-  //return config;
-
-
-  //config.headers.common['apiServices.rization'] = 'Bearer xxx'
-});
+  console.log(config)
+  return config
+})
 
 Request.interceptors.response.use(response => {
 
@@ -105,6 +77,8 @@ Request.interceptors.response.use(response => {
       });
     });
     return retryOrigReq
+  } else if(status === 402) {
+      return Promise.reject("licencia vencida")
   } else {
         const rs = Object.assign({}, error)
         if(typeof rs.response === 'undefined'){

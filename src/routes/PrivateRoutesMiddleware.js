@@ -20,17 +20,18 @@ const FriendlyRoutes = ({ component: Component, ...rest }) => {
   //alert(fakeAuth.tokenIsValidDate())
 
   if(fakeAuth.isAuthenticated()){
-    if(fakeAuth.tokenIsValidDate()){
-      //alert("xxxx")
+    element = (<Component {...rest} />)
+    //alert("xxxx")
+      /*if(fakeAuth.tokenIsValidDate()){
       element = (<Component {...rest} />)
     }else{
       element = (<RefreshTokenPage />)
       //validar el refresh token
       //this.props.actions.auth.applyRefreshToken()
-    }
+    }*/
   }else
-    element = (<Component {...rest} />)
-  //element = (<Redirect to={{ pathname: '/auth/login', state: { from: rest.location }}} />)
+    //element = (<Component {...rest} />)
+    element = (<Redirect to={{ pathname: '/oauth/login', state: { from: rest.location }}} />)
 
   return (
     <Route {...rest} render={ (props) => (element)} />

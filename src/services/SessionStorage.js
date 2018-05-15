@@ -25,6 +25,15 @@ export function getDataStorage(){
   return JSON.parse(serializedState)
 }
 
+export function setSessionInfoData(data){
+  let beginAt = new Date()
+
+  data = { ...data, beginAt }
+  setDataStorage(data)
+  //alert("aca estoy")
+  return true
+}
+
 export function setDataStorage(data){
   sessionStorage.removeItem(`${config.PREFIX_SESSION_KEYS}.auth`)
   const serializedState = JSON.stringify(data)

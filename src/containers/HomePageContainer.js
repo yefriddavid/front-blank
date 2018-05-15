@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import HomePage from '../components/HomePage/HomePage'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import * as pingActions from '../actions/ping'
 
 
 
 class HomePageContainer extends Component {
+  componentDidMount(){
+    this.props.actions.guest.ping();
+  }
   render() {
     //const response = this.props.access.error.response || { response: { status: false } }
 
@@ -22,10 +26,11 @@ const mapStateToProps = (state) => {
   }
 }
 
+
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: {
-      //websocket: bindActionCreators(wsActions, dispatch)
+      guest: bindActionCreators(pingActions, dispatch)
     }
   }
 }

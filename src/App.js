@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import LoginPage from './containers/LoginPageContainer'
 import HomePage from './containers/HomePageContainer'
+import { APP_PREFIX } from './services/config'
 
 import { Provider } from "react-redux";
 import { BrowserRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
@@ -14,17 +15,23 @@ import FriendlyRoutesMiddleware from './routes/PrivateRoutesMiddleware'
 
 const store = configureStore()
 
+const RouteNames = {
+  home: '/app/home',
+  login: '/oauth/login'
+}
+
+
 class App extends Component {
   render() {
     return (
       <Provider store = { store }>
-        <BrowserRouter basename="/myApp/">
+        <BrowserRouter basename= {`/${APP_PREFIX}/`}>
             <Switch>
-              <Route path="/xx" render={(props) => (
-                <Redirect to={{pathname: "/auth/login"}} />
+              <Route path="/" exact render={(props) => (
+                <Redirect to={{pathname: RouteNames.login}} />
               )} />
-              <Route path="/auth/login" component={ LoginPage } />
-              <FriendlyRoutesMiddleware path="/app/home" component={ HomePage } />
+              <Route path={ RouteNames.login } component={ LoginPage } />
+              <FriendlyRoutesMiddleware path={ RouteNames.home } component={ HomePage } />
             </Switch>
         </BrowserRouter>
       </Provider>

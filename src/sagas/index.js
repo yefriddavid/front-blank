@@ -2,7 +2,7 @@ import { put, call, take, fork, race, select } from 'redux-saga/effects'
 import * as apiAuth from './Services/Providers/Api/Auth'
 import * as apiServicesProvider from './Services/Providers/Api/Index'
 import * as appStorage from '../services/SessionStorage'
-import AuthLoginResponse from '../http/Middlewares/AuthLoginResponse'
+import { onLoginSuccessfull } from '../http/Middlewares/AuthLoginMiddleware'
 
 import * as socketActions from '../actions/websocket'
 import * as authActions from '../actions/auth'
@@ -42,24 +42,24 @@ export function* logoutFlow(req) {
   }
 }
 
-export function* onLoginSuccessfull() {
+export function* onSagasLoginSuccessfull() {
   while (true) {
-    const { payload } = yield take(`${authActions.errorRequest}`)
-    //alert("mundo")
-    yield call(AuthLoginResponse, payload)
+    //const { payload } = yield take(`${authActions.errorRequest}`)
+    const { payload } = yield take(`${authActions.received}`)
+    yield call(onLoginSuccessfull, payload)
   }
 }
 
 export default function* root() {
   yield fork(authFlow)
-  yield fork(onLoginSuccessfull)
-
+  yield fork(onSagasLoginSuccessfull)
     /*yield all([
     take(`${authActions.received}`, AuthLoginResponse),
     //takeEvery(`${authActions.errorRequest}`, AuthLoginResponse)
   ])*/
   //  alert("xxzzz")
-  if(appStorage.fullLoggedIn()){
+  //if(appStorage.fullLoggedIn()){
+  if(appStorage.loggedIn()){
     yield fork(logoutFlow, request)
     yield fork(watchStartBackgroundApiTask, request)
   }
