@@ -7,11 +7,10 @@ import './FormLogin.css'
 
 class FormLogin extends Component {
   contructor(props){
-    this.state = {
+    this.setState({
       username: null,
       password: null
-    }
-
+    })
     //this.onSubmit = this.onSubmit.bind(this)
   }
   onInputChange(e){
@@ -19,7 +18,6 @@ class FormLogin extends Component {
   }
   onSubmit(e){
     e.preventDefault()
-    //console.log(this.props)
     this.props.onSubmit(this.state)
   }
   render() {

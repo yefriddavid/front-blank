@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import LoginPage from '../components/LoginPage/LoginPage'
+// import LoginPage from '../components/LoginPage/LoginPage'
 import * as authActions from '../actions/auth'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import md5 from "react-native-md5";
+// import md5 from "react-native-md5";
 
 
 class RefreshTokenPageContainer extends Component {
@@ -38,6 +38,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RefreshTokenPageContainer)
-
-
-

@@ -93,7 +93,7 @@ export const clearSignData = (data) => {
 export function fullLoggedIn() {
   if(loggedIn() === true){
     let beginAt = getBeginAt()
-    let finishAt = getFinishAt()
+    // let finishAt = getFinishAt()
     if(beginAt){
       //console.log("Begin At", beginAt)
       //console.log("Current At", new Date())
@@ -116,5 +116,3 @@ export function fullLoggedIn() {
 
   return false
 }
-
-

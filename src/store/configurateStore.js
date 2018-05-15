@@ -7,7 +7,7 @@ import { loadState, saveState } from './sessionStorage'
 import { routesMiddleware } from '../http/Middlewares/routesMiddleware'
 import { composeWithDevTools } from 'redux-devtools-extension'
 //import { reduxReactRouter } from 'redux-router-dom'
-import createHistory from '../history/browserHistory'
+// import createHistory from '../history/browserHistory'
 //import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -48,4 +48,3 @@ compose(
 
   return store
 }
-

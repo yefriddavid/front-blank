@@ -5,10 +5,11 @@ import HomePage from './containers/HomePageContainer'
 import { APP_PREFIX } from './services/config'
 
 import { Provider } from "react-redux";
-import { BrowserRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
+// import { BrowserRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import configureStore from './store/configurateStore'
-import history from './history/browserHistory'
-import { fakeAuth } from './http/fakeAuth'
+// import history from './history/browserHistory'
+// import { fakeAuth } from './http/fakeAuth'
 //import { PrivateRoutes, FriendlyRoutes } from './routes/PrivateRoutes'
 import FriendlyRoutesMiddleware from './routes/PrivateRoutesMiddleware'
 //import AccessingMiddleware from './routes/AccessingMiddleware'

@@ -1,38 +1,16 @@
 import { fakeAuth } from '../http/fakeAuth'
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
-import RefreshTokenPage from '../containers/RefreshTokenPageContainer'
+// import PropTypes from 'prop-types'
+// import RefreshTokenPage from '../containers/RefreshTokenPageContainer'
+import { Route, Redirect } from 'react-router-dom';
 
-
-
-import { BrowserRouter, Router, Route, Switch, Redirect } from 'react-router-dom';
-
-
-//si tiene token, validarlo es
-
-
-//primero valigar la fecha
-//si esta vencido usar el refresh token
-//si no funciona el refresh barrar el session token out and redirect to login
 const FriendlyRoutes = ({ component: Component, ...rest }) => {
   let element
-  //alert(fakeAuth.tokenIsValidDate())
-
   if(fakeAuth.isAuthenticated()){
     element = (<Component {...rest} />)
-    //alert("xxxx")
-      /*if(fakeAuth.tokenIsValidDate()){
-      element = (<Component {...rest} />)
-    }else{
-      element = (<RefreshTokenPage />)
-      //validar el refresh token
-      //this.props.actions.auth.applyRefreshToken()
-    }*/
   }else
-    //element = (<Component {...rest} />)
     element = (<Redirect to={{ pathname: '/oauth/login', state: { from: rest.location }}} />)
-
   return (
     <Route {...rest} render={ (props) => (element)} />
   )
@@ -47,4 +25,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(FriendlyRoutes)
-

@@ -1,9 +1,9 @@
 import * as apiAuthProvider from '../../../../services/providers/Api/Auth'
-import * as appStorage from '../../../../services/SessionStorage'
-import { fork, take, call, put } from 'redux-saga/effects'
-import * as accessActions from '../../../../actions/access'
-import * as sessionActions from '../../../../actions/session'
-import * as scopesActions from '../../../../actions/scope'
+// import * as appStorage from '../../../../services/SessionStorage'
+import { call, put } from 'redux-saga/effects'
+// import * as accessActions from '../../../../actions/access'
+// import * as sessionActions from '../../../../actions/session'
+// import * as scopesActions from '../../../../actions/scope'
 import * as authActions from '../../../../actions/auth'
 
 
@@ -39,4 +39,3 @@ export function* signout(req){
     }
   }
 }*/
-

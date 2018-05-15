@@ -1,4 +1,4 @@
-import * as conf from '../../config'
+// import * as conf from '../../config'
 import req from '../../Request'
 
 
@@ -14,6 +14,3 @@ export function ping () {
       })
   })
 }
-
-
-

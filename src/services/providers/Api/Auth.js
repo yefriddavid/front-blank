@@ -3,8 +3,6 @@ import * as conf from '../../config'
 //import * as apiServices from '../Api'
 import * as sessionStorage from '../../SessionStorage'
 import req from '../../Request'
-import request from '../../Request'
-
 
 export const access = () => {
    return new Promise((resolve, reject) => {
@@ -47,10 +45,8 @@ export const refreshToken = () => {
 }
 
 export function signin (user, pass) {
-  alert("here, I am!!")
-  console.log(req)
   return new Promise((resolve, reject) => {
-    request.post(`/oauth/token`,
+    req.post(`/oauth/token`,
       {
         username: user,
         password: pass,
@@ -113,6 +109,3 @@ export const register = (req, username, password) => {
   return req.post('/register', {username, password})
     .then(() => signin(username, password))
 }
-
-
-

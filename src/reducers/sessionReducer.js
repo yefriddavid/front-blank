@@ -4,13 +4,13 @@ import {
   loginCampaignResponse,
 
   loadCampaignDetailsResponse,
-  logoutCampaign,
+  // logoutCampaign,
   logoutCampaignRequest,
   logoutCampaignResponse,
   loadCampaignResponse,
 
   pauseCampaign,
-  pauseCampaignResponse
+  // pauseCampaignResponse
 } from '../actions/session'
 
 
@@ -73,5 +73,3 @@ const campaign = createReducer({
 export default combineReducers(
   { campaign }
 );
-
-

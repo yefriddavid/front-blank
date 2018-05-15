@@ -1,4 +1,4 @@
-import * as accessActions from '../actions/access'
+// import * as accessActions from '../actions/access'
 import * as authActions from '../actions/auth'
 //import { takeOut } from '../actions/websocket'
 
@@ -38,6 +38,3 @@ export default combineReducers(
     login
   }
 );
-
-
-

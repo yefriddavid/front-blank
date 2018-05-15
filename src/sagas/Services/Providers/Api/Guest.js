@@ -1,6 +1,6 @@
 //import * as apiAuth from './providers/Api/Auth'
 import * as apiGuest from '../../../../services/providers/Api/Guest'
-import { fork, take, call, put } from 'redux-saga/effects'
+import { take, call, put } from 'redux-saga/effects'
 import * as guestActions from '../../../../actions/ping'
 
 
@@ -30,9 +30,3 @@ export function* ping(req) {
     }
   }
 }*/
-
-
-
-
-
-

@@ -18,27 +18,21 @@ Request.interceptors.request.use(async (config) => {
     if(!appStorage.fullLoggedIn() && !isOlder){
       isOlder = true
       try{
-        const response = await
-          apiAuthProvider.refreshToken(Request)
-
+        const response = await apiAuthProvider.refreshToken(Request)
         appStorage.setSessionInfoData(response.data)
       }catch(ex){
-        alert("all bad")
-
       }
     }
   }
   const headers = appStorage.getHeaders()
   config.headers["Authorization"] = headers["Authorization"]
-  console.log(config)
+  // console.log(config)
   return config
 })
 
 Request.interceptors.response.use(response => {
-
   return response;
 }, error => {
-  //alert("xxxx")
   const { config } = error
   //console.log(error)
   //const { response: { status } } = error || { response: { status: false } }
@@ -102,4 +96,3 @@ function onRrefreshed(token) {
 
 
 export default Request
-

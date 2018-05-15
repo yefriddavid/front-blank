@@ -1,13 +1,13 @@
-import { put, call, take, fork, race, select } from 'redux-saga/effects'
+import { put, call, take, fork, race } from 'redux-saga/effects'
 import * as apiAuth from './Services/Providers/Api/Auth'
 import * as apiServicesProvider from './Services/Providers/Api/Index'
 import * as appStorage from '../services/SessionStorage'
 import { onLoginSuccessfull } from '../http/Middlewares/AuthLoginMiddleware'
 
-import * as socketActions from '../actions/websocket'
+// import * as socketActions from '../actions/websocket'
 import * as authActions from '../actions/auth'
-import * as accessActions from '../actions/access'
-import * as selectors from '../reducers/selectors'
+// import * as accessActions from '../actions/access'
+// import * as selectors from '../reducers/selectors'
 import request from '../services/Request'
 
 
@@ -64,5 +64,3 @@ export default function* root() {
     yield fork(watchStartBackgroundApiTask, request)
   }
 }
-
-

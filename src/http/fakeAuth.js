@@ -1,4 +1,4 @@
-import * as config from "../services/config"
+// import * as config from "../services/config"
 import * as AppStorage from "../services/SessionStorage"
 
 export const fakeAuth = {
