@@ -13,6 +13,7 @@ import configureStore from './store/configurateStore'
 //import { PrivateRoutes, FriendlyRoutes } from './routes/PrivateRoutes'
 import FriendlyRoutesMiddleware from './routes/PrivateRoutesMiddleware'
 //import AccessingMiddleware from './routes/AccessingMiddleware'
+import { FriendlyRoutes } from "callcenter2_react_components"
 
 const store = configureStore()
 
@@ -33,6 +34,7 @@ class App extends Component {
               )} />
               <Route path={ RouteNames.login } component={ LoginPage } />
               <FriendlyRoutesMiddleware path={ RouteNames.home } component={ HomePage } />
+              <FriendlyRoutes path={ "/test" } component={ HomePage } />
             </Switch>
         </BrowserRouter>
       </Provider>
