@@ -1,5 +1,5 @@
 // import * as conf from '../../config'
-import req from '../../Request'
+import { Request as req } from 'callcenter2_react_components'
 
 
 export function ping () {

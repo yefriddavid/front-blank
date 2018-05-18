@@ -1,8 +1,9 @@
 //import Request from '../Request'
-import * as conf from '../../config'
+//import * as process.env.REACT_APP_from '../../process.env.REACT_APP_g'
 //import * as apiServices from '../Api'
-import * as sessionStorage from '../../SessionStorage'
-import req from '../../Request'
+//import * as sessionStorage from '../../SessionStorage'
+//import req from '../../Request'
+import { Request as req } from 'callcenter2_react_components'
 
 export const access = () => {
    return new Promise((resolve, reject) => {
@@ -13,10 +14,10 @@ export const access = () => {
           }
         }
       ).then(function (res){
-        if(res.status === 402)
-          reject('Licencia vencida')
+        //if(res.status === 402)
+        //  reject('Licencia vencida')
 
-        res.data.success = true
+        //res.data.success = true
         resolve(res)
       }).catch(error => {
           reject(error)
@@ -24,15 +25,15 @@ export const access = () => {
      })
 }
 
-export const refreshToken = () => {
+  /*export const refreshToken = () => {
   return new Promise((resolve, reject) => {
     req.post(
       `/oauth/token`, {
       'grant_type': 'refresh_token',
       'refresh_token': sessionStorage.getRefreshToken(),
-      'client_id': conf.API_CLIENT_ID,
-      'client_secret': conf.API_CLIENT_SECRET,
-      'scope': conf.API_SCOPE
+      'client_id': process.env.REACT_APP_API_CLIENT_ID,
+      'client_secret': process.env.REACT_APP_API_CLIENT_SECRET,
+      'scope': process.env.REACT_APP_API_SCOPE
     },
     {
       headers: {
@@ -42,18 +43,20 @@ export const refreshToken = () => {
         resolve(res)
       });
     })
-}
+}*/
 
 export function signin (user, pass) {
+  //alert("Mundo")
+  //console.log(req)
   return new Promise((resolve, reject) => {
     req.post(`/oauth/token`,
       {
         username: user,
         password: pass,
         grant_type: 'password',
-        scope: conf.API_SCOPE,
-        client_secret: conf.API_CLIENT_SECRET,
-        client_id: conf.API_CLIENT_ID
+        scope: process.env.REACT_APP_API_SCOPE,
+        client_secret: process.env.REACT_APP_API_CLIENT_SECRET,
+        client_id: process.env.REACT_APP_API_CLIENT_ID
       }
       ,
       {
@@ -62,12 +65,10 @@ export function signin (user, pass) {
         }
       }
     ).then(function (res){
-      if(res.status !== 200)
-        reject({message: 'User or password incorrect'})
 
       resolve(res)
     }).catch(function(error){
-          reject(error)
+      reject(error)
     })
   })
 }
