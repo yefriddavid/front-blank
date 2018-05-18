@@ -2,7 +2,10 @@ import { put, call, take, fork, race } from 'redux-saga/effects'
 import * as apiAuth from './Services/Providers/Api/Auth'
 import * as apiServicesProvider from './Services/Providers/Api/Index'
 import * as appStorage from '../services/SessionStorage'
-import { onLoginSuccessfull } from '../http/Middlewares/AuthLoginMiddleware'
+//import { onLoginSuccessfull } from '../http/Middlewares/AuthLoginMiddleware'
+//import { Onloginsuccessfull } from 'callcenter2_react_components'
+import { onLoginSuccessfull } from 'callcenter2_react_components'
+import * as history from '../history/browserHistory'
 
 // import * as socketActions from '../actions/websocket'
 import * as authActions from '../actions/auth'
@@ -46,7 +49,8 @@ export function* onSagasLoginSuccessfull() {
   while (true) {
     //const { payload } = yield take(`${authActions.errorRequest}`)
     const { payload } = yield take(`${authActions.received}`)
-    yield call(onLoginSuccessfull, payload)
+    yield call(onLoginSuccessfull, payload, history)
+    //yield call(Onloginsuccessfull, payload, history)
   }
 }
 

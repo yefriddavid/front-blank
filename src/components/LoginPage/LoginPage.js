@@ -5,6 +5,8 @@ import './LoginPage.css'
 
 export default class LoginPage extends Component {
   render() {
+    console.log(process.env)
+    console.log(process.env)
     return (
       <div className="LoginPage">
         <FormLogin {...this.props} />
