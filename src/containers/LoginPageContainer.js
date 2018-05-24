@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LoginPage from '../components/LoginPage/LoginPage'
-import * as authActions from '../actions/auth'
+import * as authActions from '../actions/authActions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import md5 from "react-native-md5";

@@ -1,5 +1,5 @@
 // import * as accessActions from '../actions/access'
-import * as authActions from '../actions/auth'
+import * as authActions from '../actions/authActions'
 //import { takeOut } from '../actions/websocket'
 
 import { createReducer } from 'redux-act'

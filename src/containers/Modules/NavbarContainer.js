@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import FormLogin from '../../components/Elements/FormLogin'
+import NavbarComponent from '../../components/Elements/Navbar/NavbarComponent'
 
 
-class FormLoginContainer extends Component {
+class NavbarContainer extends Component {
   render() {
     return (
-    <FormLogin {...this.props} />
+    <NavbarComponent {...this.props} />
     )
   }
 }
@@ -29,5 +29,5 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CallBoxContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarContainer)
 

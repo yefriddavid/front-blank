@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
-import FormLogin from '../Elements/FormLogin/FormLogin'
-//import { ListGroup, ListGroupItem, Grid, Col, Row, ButtonToolbar, Button } from 'react-bootstrap'
-import './LoginPage.css'
+import davidx, { ExampleComponent as david, LoginScreen, StandardFormLogin as FormLogin } from "callcenter2_react_components"
 
 export default class LoginPage extends Component {
   render() {
-    console.log(process.env)
-    console.log(process.env)
     return (
-      <div className="LoginPage">
+      <LoginScreen>
         <FormLogin {...this.props} />
-      </div>
+      </LoginScreen>
     )
   }
 }

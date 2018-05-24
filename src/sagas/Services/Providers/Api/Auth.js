@@ -4,7 +4,7 @@ import { call, put } from 'redux-saga/effects'
 // import * as accessActions from '../../../../actions/access'
 // import * as sessionActions from '../../../../actions/session'
 // import * as scopesActions from '../../../../actions/scope'
-import * as authActions from '../../../../actions/auth'
+import * as authActions from '../../../../actions/authActions'
 
 
 export function* signin(user, pass, req){

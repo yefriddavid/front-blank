@@ -1,16 +1,9 @@
 import { put, call, take, fork, race } from 'redux-saga/effects'
 import * as apiAuth from './Services/Providers/Api/Auth'
 import * as apiServicesProvider from './Services/Providers/Api/Index'
-//import { onLoginSuccessfull } from '../http/Middlewares/AuthLoginMiddleware'
-//import { Onloginsuccessfull } from 'callcenter2_react_components'
-//import { onLoginSuccessfull } from 'callcenter2_react_components'
 import * as history from '../history/browserHistory'
 
-// import * as socketActions from '../actions/websocket'
-import * as authActions from '../actions/auth'
-// import * as accessActions from '../actions/access'
-// import * as selectors from '../reducers/selectors'
-//import request from '../services/Request'
+import * as authActions from '../actions/authActions'
 import { Request as request, onLoginSuccessfull, appStore as appStorage } from 'callcenter2_react_components'
 
 
