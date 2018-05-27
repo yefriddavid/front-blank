@@ -12,7 +12,6 @@ export function* authFlow() {
     try{
       const { payload } = yield take(`${authActions.login}`)
       yield call(apiAuth.signin, payload.username, payload.password, request)
-      //let loginState = yield select(selectors.selectedLogin)
       yield fork(logoutFlow)
       yield fork(watchStartBackgroundApiTask, request)
     } catch (e) {
@@ -33,17 +32,14 @@ export function* logoutFlow(req) {
   while (true) {
     yield take(`${authActions.logout}`)
     yield call(apiAuth.signout, req)
-    //yield call(asteriskServices.signout)
     yield put(authActions.cancelConnections())
   }
 }
 
 export function* onSagasLoginSuccessfull() {
   while (true) {
-    //const { payload } = yield take(`${authActions.errorRequest}`)
     const { payload } = yield take(`${authActions.received}`)
     yield call(onLoginSuccessfull, payload, history)
-    //yield call(Onloginsuccessfull, payload, history)
   }
 }
 
@@ -54,7 +50,6 @@ export default function* root() {
     take(`${authActions.received}`, AuthLoginResponse),
     //takeEvery(`${authActions.errorRequest}`, AuthLoginResponse)
   ])*/
-  //  alert("xxzzz")
   //if(appStorage.fullLoggedIn()){
   if(appStorage.loggedIn()){
     yield fork(logoutFlow, request)

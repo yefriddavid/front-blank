@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import UsersPageComponent from '../components/UsersPage/UsersPageComponent'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as pingActions from '../actions/ping'
+import * as usersActions from '../actions/users'
 
 
 
-class HomePageContainer extends Component {
+class UsersPageContainer extends Component {
   componentDidMount(){
-    this.props.actions.guest.ping();
+    this.props.actions.users.collection();
   }
   render() {
-    //const response = this.props.access.error.response || { response: { status: false } }
 
     return (
       <UsersPageComponent {...this.props} />
@@ -21,8 +20,9 @@ class HomePageContainer extends Component {
 
 
 const mapStateToProps = (state) => {
+  const { users } = state
   return {
-
+    users
   }
 }
 
@@ -30,12 +30,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: {
-      guest: bindActionCreators(pingActions, dispatch)
+      users: bindActionCreators(usersActions, dispatch)
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePageContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(UsersPageContainer)
 
 
 

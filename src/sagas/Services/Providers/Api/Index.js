@@ -1,13 +1,13 @@
-// import { refreshToken } from './Auth'
 import { fork } from 'redux-saga/effects'
-//import { onRefreshTokenSuccessfull } from '../../../../http/Middlewares/AuthLoginMiddleware'
-// import * as authActions from '../../../../actions/auth'
 import { ping } from './Guest'
+import * as users from './Users'
 
 //aca solo va un handerler con todos los accesos
 export function* handler() {
-  //yield fork(access, req)
-  yield fork(ping)
+  yield [
+    fork(ping),
+    fork(users.collection)
+  ]
   //yield fork(scopes, req)
 
   //yield fork(refreshToken, req)

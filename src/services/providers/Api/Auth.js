@@ -1,8 +1,3 @@
-//import Request from '../Request'
-//import * as process.env.REACT_APP_from '../../process.env.REACT_APP_g'
-//import * as apiServices from '../Api'
-//import * as sessionStorage from '../../SessionStorage'
-//import req from '../../Request'
 import { Request as req } from 'callcenter2_react_components'
 
 export const access = () => {
@@ -14,10 +9,6 @@ export const access = () => {
           }
         }
       ).then(function (res){
-        //if(res.status === 402)
-        //  reject('Licencia vencida')
-
-        //res.data.success = true
         resolve(res)
       }).catch(error => {
           reject(error)
@@ -25,7 +16,7 @@ export const access = () => {
      })
 }
 
-  /*export const refreshToken = () => {
+export const refreshToken = () => {
   return new Promise((resolve, reject) => {
     req.post(
       `/oauth/token`, {
@@ -43,11 +34,9 @@ export const access = () => {
         resolve(res)
       });
     })
-}*/
+}
 
 export function signin (user, pass) {
-  //alert("Mundo")
-  //console.log(req)
   return new Promise((resolve, reject) => {
     req.post(`/oauth/token`,
       {
