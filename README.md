@@ -1,4 +1,4 @@
-# Guia
+# Read Design Pattern (Transactional Apps with sagas)
 
 
 
@@ -82,6 +82,18 @@ BlockName--modifier
 </form>
 
 
+
+
+```
+
+
+
+
+### References
+
+```
+https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
+https://github.com/krasimir/react-in-patterns
 
 
 ```

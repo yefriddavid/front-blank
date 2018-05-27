@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import LoginPage from './containers/LoginPageContainer'
 //import HomePage from './containers/HomePageContainer'
 import FriendlyRoutesLayout from './containers/Layouts/Friendly'
+import GuestRoutesLayout from './containers/Layouts/Guest'
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,14 +12,9 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import configureStore from './store/configurateStore'
 import { FriendlyRoutes } from "callcenter2_react_components"
+import { RouteNames } from './routes/Miscellany'
 
 const store = configureStore()
-const RouteNames = {
-  root: '/app',
-  home: '/app/home',
-  users: '/app/users',
-  login: '/oauth/login'
-}
 
 
 
@@ -31,7 +27,8 @@ class App extends Component {
             <Route path="/" exact render={(props) => (
               <Redirect to={{pathname: RouteNames.login}} />
             )} />
-            <Route path={ RouteNames.login } component={ LoginPage } />
+            {/*<Route path={ RouteNames.login } component={ LoginPage } />*/}
+            <Route path={ RouteNames.rootOauth } component={ GuestRoutesLayout } />
             <FriendlyRoutes path={ RouteNames.root } component={ FriendlyRoutesLayout } />
           </Switch>
         </BrowserRouter>
