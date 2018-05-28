@@ -1,12 +1,12 @@
-# Read Design Pattern (Transactional Apps with sagas)
+# Patron de diseño Microvoz Front-End con React y Sagas
 
 
 
 
-#instalar libreria de componentes microvoz en un proyecto
+### instalar libreria de componentes microvoz en un proyecto
 
 ```
-https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
+
 npm install microvoz/callcenter2_react_components --save
 git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@github.com:
 
@@ -233,5 +233,6 @@ src/
 https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
 https://github.com/krasimir/react-in-patterns
 http://getbem.com/introduction/
+https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
 
 ```
