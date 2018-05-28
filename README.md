@@ -108,8 +108,7 @@ src/
 │   │   └── Guest  
 │   ├── LoginPage  
 │   └── UsersPage  
-├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
-)  
+├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)  
 │   ├── Layouts 
 │   └── Modules  
 ├── css  
@@ -128,7 +127,7 @@ src/
 │   └── Services  
 │       └── Providers  
 │           └── Api  
-├── services 
+├── services  
 │   └── providers  
 │       └── Api  
 ├── statics  
