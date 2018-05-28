@@ -157,7 +157,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
 ### Bem css (Escritura css)
 
 
-```
+```CSS
 BlockName
 BlockName__element
 BlockName__element__grandchildren
@@ -172,15 +172,15 @@ BlockName--modifier
 .form__submit--disabled { }
 
 
+```
+
+```HTML
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
   <input
     class="form__submit form__submit--disabled"
     type="submit" />
 </form>
-
-
-
 ```
 tree -d
 src/  
