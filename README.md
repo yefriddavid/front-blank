@@ -106,7 +106,8 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 | Redux-sagas   |[https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
 | Express       |      [http://expressjs.com/es/](http://expressjs.com/es/) |
 | Bem Css       |      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
-| React Redux       |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
+| React Redux   |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
+|Reactstrap     |[https://reactstrap.github.io/](https://reactstrap.github.io/)|
 
 ### Uso de componentes
 Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
