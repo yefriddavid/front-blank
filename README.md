@@ -16,6 +16,9 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 * [Bem css (Escritura css)](#bem-css-escritura-css)
 * [References](#references)
 
+* [Api calls](#Api calls)
+* [Sagas](#Sagas)
+
 
 
 ### Instalar libreria de componentes microvoz en un proyecto
