@@ -93,7 +93,46 @@ BlockName--modifier
 
 
 
-```
+```src/
+├── actions                                   [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
+├── components
+│   ├── Elements
+│   │   ├── ContentSection
+│   │   ├── FormLogin
+│   │   ├── Navbar
+│   │   └── Spinner
+│   ├── HomePage
+│   ├── Layouts
+│   │   ├── Friendly
+│   │   └── Guest
+│   ├── LoginPage
+│   └── UsersPage
+├── containers
+│   ├── Layouts
+│   └── Modules
+├── css
+├── fonts
+├── history
+│   └── Middlewares
+├── http
+│   └── Middlewares
+├── img
+├── js
+├── reducers
+├── routes
+├── sagas
+│   ├── internal
+│   │   └── sagaHelpers
+│   └── Services
+│       └── Providers
+│           └── Api
+├── services
+│   └── providers
+│       └── Api
+├── statics
+├── store
+└── utils
+
 
 
 
