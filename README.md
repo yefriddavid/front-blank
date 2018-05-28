@@ -118,7 +118,7 @@ NOTA: Es importante tener encuenta que si el componente tiene lógica de program
 ### Uso de containers
 
 Los componentes los usamos para poner el código javascript o la lógica de los componentes.
-```
+```JS
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
