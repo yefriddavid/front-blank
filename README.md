@@ -53,8 +53,17 @@ $ nvm alias default 9.2.0
 $ npm install pm2 -g
 $ nvm current // 9.2.0
 ```
+## Tecnologias utilizadas
 
-
+| Tecnologías   | Requerida     | Opcional  	|
+| ------------- |:-------------:|:-----------:|
+| NodeJs        | 	    x       |  	        	|      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
+| ReactJs       | 	    x 	    |  	        	|      [https://reactjs.org/docs/hello-world.html] (https://reactjs.org/docs/hello-world.html) |
+| Sagas         |  		          |     	x   	|      [https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga) |
+| Redux         |  		          |     	x   	|      [https://redux.js.org/](https://redux.js.org/) |
+| Axios         |  		          |     	x   	|      [https://github.com/axios/axios](https://github.com/axios/axios) |
+| Redux-sagas   |  		          |    	  x   	|      [https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
+| Express       |  		          |     	x   	|      [http://expressjs.com/es/](http://expressjs.com/es/)
 
 ### Bem css
 
