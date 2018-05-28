@@ -120,9 +120,9 @@ src/
 │   └── Middlewares  
 ├── img  
 ├── js  
-├── reducers  
+├── [reducers](https://redux.js.org/basics/reducers)  
 ├── routes  
-├── sagas  
+├── [sagas](https://github.com/barbuza/react-saga)  
 │   ├── internal  
 │   │   └── sagaHelpers  
 │   └── Services  
@@ -132,7 +132,7 @@ src/
 │   └── providers  
 │       └── Api  
 ├── statics  
-├── store  
+├── [store](https://redux.js.org/api-reference/store)  
 └── utils  
 
 
