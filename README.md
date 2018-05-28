@@ -116,8 +116,9 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 ### Uso de componentes
 Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
 
-**FormLoginComponent.js**
+
 ```JS
+#!FormLoginComponent.js
 
 import React, { Component } from 'react'
 
@@ -165,6 +166,8 @@ export default FormLogin
 
 Los componentes los usamos para poner el código javascript o la lógica de los componentes.
 ```JS
+#!FormLoginContainer.js
+
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
