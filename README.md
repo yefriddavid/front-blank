@@ -159,6 +159,15 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
+```CSS
+.FormLogin{
+
+}
+.FormLogin__input {
+
+}
+```
+
 **NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, relacionadas a las reglas o requisitos del software estas deben ser escritas en los contenedores, adicionalmente cada componente debe estar acompañado de un **.css** con el mismo nombre sin el sufijo **Component**
 
 
