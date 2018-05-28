@@ -71,7 +71,7 @@ $ nvm current // 9.2.0
 ### Uso de componentes
 Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
 
-```
+```JS
 
 import React, { Component } from 'react'
 
