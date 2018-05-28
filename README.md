@@ -55,8 +55,8 @@ $ nvm current // 9.2.0
 ```
 ## Tecnologias utilizadas
 
-| Tecnologías   | Requerida     | Opcional  	|
-| ------------- |:-------------:|:-----------:|
+| Tecnologías   | Requerida     | Opcional  	| Opcional |
+| ------------- |:-------------:|:-----------:|:-----------:|
 | NodeJs        | 	    x       |  	        	|      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
 | ReactJs       | 	    x 	    |  	        	|      [https://reactjs.org/docs/hello-world.html] (https://reactjs.org/docs/hello-world.html) |
 | Sagas         |  		          |     	x   	|      [https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga) |
