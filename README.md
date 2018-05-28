@@ -95,14 +95,15 @@ REACT_APP_API_ENDPOINT=http://foo.bar/api
 
 ### Tecnologías utilizadas
 Algunas de las tecnologias usagas por las aplicaciones internas.
+
 | Tecnologías   | Documentación |
-| ------------- |-----------|
+| ------------- |---------------|
 | NodeJs        |      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
 | ReactJs       |      [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html) |
 | Sagas         |      [https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga) |
 | Redux         |      [https://redux.js.org/](https://redux.js.org/) |
 | Axios         |      [https://github.com/axios/axios](https://github.com/axios/axios) |
-| Redux-sagas   |      [https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
+| Redux-sagas   |[https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
 | Express       |      [http://expressjs.com/es/](http://expressjs.com/es/) |
 | Bem Css       |      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
 | React Redux       |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
