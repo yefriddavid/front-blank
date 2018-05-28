@@ -204,16 +204,86 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
 ```
 
 ### Api calls
-```
+```JS
+#!src/services/providers/Api/Users.js
+
+import req from '../../Request'
+
+export function collection() {
+  return new Promise((resolve, reject) => {
+    req.get('/users', {
+        headers: {
+          'Accept': 'application/json',
+        }
+      })
+      .then(response => {
+        resolve(response)
+      })
+  })
+}
 ```
 ### Sagas
 ```
+#!src/sagas/Services/Providers/Api/Users.js
+
+import * as apiUsers from '../../../../services/providers/Api/Users'
+import { take, call, put } from 'redux-saga/effects'
+import * as usersActions from '../../../../actions/users'
+
+
+
+export function* collection() {
+  while (true) {
+    const { payload } = yield take(`${usersActions.collection}`);
+    try{
+      yield put(usersActions.requestCollection())
+      alert("ssssaaa")
+      const response = yield call(apiUsers.collection, payload)
+
+      yield put(usersActions.receivedCollection(response))
+    } catch(e){
+      alert("ssss")
+      yield put(usersActions.errorRequestCollection(e))
+    }
+  }
+}
 ```
 ### Sockets
 ```
+
 ```
 ### Store
-```
+```JS
+import { createStore, applyMiddleware, compose } from 'redux'
+import combinedReducers from '../reducers/combinedReducers'
+import createSagaMiddleware from 'redux-saga'
+import sagaMonitor from '../sagas/sagaMonitor'
+import rootSaga from '../sagas/index.js'
+import { loadState, saveState } from './sessionStorage'
+import { routesMiddleware } from '../http/Middlewares/routesMiddleware'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
+const composeEnhancers = composeWithDevTools({
+  // Specify name here, actionsBlacklist, actionsCreators and other options if needed
+})
+
+export default function configureStore(initialState, browserHistory) {
+  const sagaMiddleware = createSagaMiddleware({sagaMonitor})
+  const persistedState = loadState()
+  const store = createStore(
+                          combinedReducers,
+                          persistedState,
+                          compose(
+                            applyMiddleware(routesMiddleware),
+                            composeEnhancers(applyMiddleware(sagaMiddleware)),
+                          )
+                 )
+  sagaMiddleware.run(rootSaga)
+  store.subscribe(() => {
+    saveState(store.getState())
+  })
+  return store
+}
 ```
 
 
