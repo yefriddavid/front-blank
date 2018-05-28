@@ -94,7 +94,7 @@ BlockName--modifier
 
 
 ```src/
-├── actions                                   [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
+├── actions                     https://redux.js.org/basics/actions
 ├── components
 │   ├── Elements
 │   │   ├── ContentSection
