@@ -26,23 +26,20 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 
 foo@bar:~$ npm install microvoz/callcenter2_react_components --save
 foo@bar:~$ git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@github.com:
-
-
-
 ```
 
 ```json
 "dependencies": {
-"GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git",
-"callcenter2_react_components": "github:microvoz/callcenter2_react_components",
-"callcenter2_react_components": "github:microvoz/callcenter2_react_components#branchName",
-"callcenter2_react_components": "file:../callcenter2_react_components",
-
+  "GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git",
+  "callcenter2_react_components": "github:microvoz/callcenter2_react_components",
+  "callcenter2_react_components": "github:microvoz/callcenter2_react_components#branchName",
+  "callcenter2_react_components": "file:../callcenter2_react_components",
 }
 ```
 
 
 ### Crear e instalar un proyecto desde cero
+Como crear un proyecto desde cero y como iniciarlo en react con la ayuda de **create-react-app**
 ```console
 foo@bar:~$ npm install create-react-app -g
 foo@bar:~$ create-react-app projectname
@@ -50,6 +47,7 @@ foo@bar:~$ npm start
 ```
 
 ### Instalar un proyecto e iniciarlo
+Como instalar las dependencias de un proyecto y como iniciarlo
 ```console
 foo@bar:~$ npm install
 foo@bar:~$ npm start
@@ -58,6 +56,7 @@ foo@bar:~$ sensible-browser http://127.0.0.1:3000
 
 
 ### Publicar el proyecto
+Como publicar un proyecto, esto crea la carpeta **build** dentro del mismo.
 ```console
 foo@bar:~$ npm run build
 foo@bar:~$ cd rootProject/build
@@ -67,6 +66,7 @@ foo@bar:~$ cd rootProject/build
 
 
 ### Instalar node y npm
+Procedimiento para instalar nodeJs
 ```console
 foo@bar:~$ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 foo@bar:~$ source ~/.bashrc
@@ -76,6 +76,14 @@ foo@bar:~$ nvm alias default 9.2.0
 foo@bar:~$ npm install pm2 -g
 foo@bar:~$ nvm current // 9.2.0
 ```
+### Instalar node y npm con Docker
+```
+docker-compose.yml
+
+---
+```
+
+
 ### Variables de Configuración
 Las variables de configuración se definen en el archivo **./.env** con el prefijo **REACT_APP_** y para tener acceso a ellas es necesario ejecutar el comando **npm run build**
 ```console
@@ -86,7 +94,7 @@ REACT_APP_API_ENDPOINT=http://foo.bar/api
 
 
 ### Tecnologías utilizadas
-
+Algunas de las tecnologias usagas por las aplicaciones internas.
 | Tecnologías   | Documentación |
 | ------------- |-----------|
 | NodeJs        |      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
@@ -102,6 +110,7 @@ REACT_APP_API_ENDPOINT=http://foo.bar/api
 ### Uso de componentes
 Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
 
+**FormLoginComponent.js**
 ```JS
 
 import React, { Component } from 'react'
@@ -143,7 +152,7 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
-**NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, relacionadas a las reglas o requisitos del software estas deben ser escritas en los contenedores.
+**NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, relacionadas a las reglas o requisitos del software estas deben ser escritas en los contenedores, adicionalmente cada componente debe estar acompañado de un **.css** con el mismo nombre sin el sufijo **Component**
 
 
 ### Uso de containers
@@ -186,7 +195,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
 ```
 
 ### Bem css (Escritura css)
-
+Patron de desarrollo **CSS** para los componentes
 
 ```CSS
 .BlockName
