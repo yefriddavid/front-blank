@@ -17,8 +17,8 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 * [References](#references)
 * [Api calls](#Api_calls)
 * [Sagas](#Sagas)
-
-
+* [Sockets](#Sockets)
+* [Store](#Store)
 
 ### Instalar libreria de componentes microvoz en un proyecto
 
@@ -108,6 +108,9 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 | Bem Css       |      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
 | React Redux   |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
 |Reactstrap     |[https://reactstrap.github.io/](https://reactstrap.github.io/)|
+|Socket io client|[https://github.com/socketio/socket.io-client](https://github.com/socketio/socket.io-client) |
+
+
 
 ### Uso de componentes
 Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
