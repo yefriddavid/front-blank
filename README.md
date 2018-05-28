@@ -93,13 +93,13 @@ BlockName--modifier
 
 
 ```
-src/
-├── actions                     [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
-├── components
-│   ├── Elements
+src/  
+├── actions               [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
+├── components  
+│   ├── Elements  
 │   │   ├── ContentSection
-│   │   ├── FormLogin <br />
-│   │   ├── Navbar  
+│   │   ├── FormLogin
+│   │   ├── Navbar
 │   │   └── Spinner
 │   ├── HomePage
 │   ├── Layouts
