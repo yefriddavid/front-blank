@@ -110,7 +110,7 @@ src/
 ├── containers
 │   ├── Layouts
 │   └── Modules
-├── css\
+├── css
 ├── fonts
 ├── history
 │   └── Middlewares
