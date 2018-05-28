@@ -109,7 +109,7 @@ src/
 │   ├── LoginPage  
 │   └── UsersPage  
 ├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)  
-│   ├── Layouts 
+│   ├── Layouts  
 │   └── Modules  
 ├── css  
 ├── fonts  
