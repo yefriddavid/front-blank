@@ -94,27 +94,27 @@ BlockName--modifier
 
 ```
 src/  
-├── actions               [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
+├── actions               [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)  
 ├── components  
 │   ├── Elements  
-│   │   ├── ContentSection
-│   │   ├── FormLogin
-│   │   ├── Navbar
-│   │   └── Spinner
-│   ├── HomePage
-│   ├── Layouts
-│   │   ├── Friendly
-│   │   └── Guest
-│   ├── LoginPage
-│   └── UsersPage
-├── containers
-│   ├── Layouts
-│   └── Modules
-├── css 
-├── fonts
-├── history
-│   └── Middlewares
-├── http
+│   │   ├── ContentSection  
+│   │   ├── FormLogin  
+│   │   ├── Navbar  
+│   │   └── Spinner  
+│   ├── HomePage  
+│   ├── Layouts  
+│   │   ├── Friendly  
+│   │   └── Guest  
+│   ├── LoginPage  
+│   └── UsersPage  
+├── containers  
+│   ├── Layouts 
+│   └── Modules  
+├── css  
+├── fonts  
+├── history  
+│   └── Middlewares  
+├── http  
 │   └── Middlewares
 ├── img
 ├── js
