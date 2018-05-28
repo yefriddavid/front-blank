@@ -92,7 +92,7 @@ BlockName--modifier
 
 
 
-
+```
 src/
 ├── actions                     [https://redux.js.org/basics/actions](https://redux.js.org/basics/actions)
 ├── components
@@ -110,7 +110,7 @@ src/
 ├── containers
 │   ├── Layouts
 │   └── Modules
-├── css
+├── css\
 ├── fonts
 ├── history
 │   └── Middlewares
