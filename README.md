@@ -51,8 +51,7 @@ foo@bar:~$ npm start
 ```console
 foo@bar:~$ npm install
 foo@bar:~$ npm start
-
-http://127.0.0.1:3000
+foo@bar:~$ sensible-browser http://127.0.0.1:3000
 ```
 
 
