@@ -143,7 +143,7 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
-**NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, esta debe ser escrita en los contenedores.
+**NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, relacionadas a las reglas o requisitos del software estas deben ser escritas en los contenedores.
 
 
 ### Uso de containers
