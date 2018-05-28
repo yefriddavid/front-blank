@@ -1,7 +1,7 @@
 # Patrón de diseño Microvoz Front-End con React y Sagas
 
 
-## Tabla de Contenido
+### Tabla de Contenido
 
 * [Crear e instalar un proyecto desde cero](#crear-e-instalar-un-proyecto-desde-cero)
 * [Instalar un proyecto e iniciarlo](#instalar-un-proyecto-e-iniciarlo)
@@ -55,7 +55,7 @@ cd rootProject/build
 
 
 
-## Instalar node y npm
+### Instalar node y npm
 ```
 $ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 $ source ~/.bashrc
@@ -66,7 +66,7 @@ $ npm install pm2 -g
 $ nvm current // 9.2.0
 ```
 
-## Tecnologías utilizadas
+### Tecnologías utilizadas
 
 | Tecnologías   | Documentación |
 | ------------- |-----------|
