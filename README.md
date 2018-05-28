@@ -98,8 +98,8 @@ src/
 ├── components
 │   ├── Elements
 │   │   ├── ContentSection
-│   │   ├── FormLogin
-│   │   ├── Navbar
+│   │   ├── FormLogin <br />
+│   │   ├── Navbar  
 │   │   └── Spinner
 │   ├── HomePage
 │   ├── Layouts
@@ -110,7 +110,7 @@ src/
 ├── containers
 │   ├── Layouts
 │   └── Modules
-├── css \
+├── css 
 ├── fonts
 ├── history
 │   └── Middlewares
