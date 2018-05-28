@@ -18,14 +18,14 @@ git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@gith
 
 
 
-### Install create react project
+### Crear e instalar un proyecto desde cero
 ```
 npm install create-react-app -g
 create-react-app projectname
 npm start
 ```
 
-### Install and Start this project
+### Instalar un prouyecto e iniciarlo
 ```
 npm install
 npm start
@@ -34,7 +34,7 @@ http://127.0.0.1:3000
 ```
 
 
-### Build this project
+### Publicar el proyecto
 ```
 npm run build
 cd rootProject/build
@@ -43,7 +43,7 @@ cd rootProject/build
 
 
 
-## install node and npm
+## Instalar node y npm
 ```
 $ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 $ source ~/.bashrc
@@ -53,18 +53,118 @@ $ nvm alias default 9.2.0
 $ npm install pm2 -g
 $ nvm current // 9.2.0
 ```
+
 ## Tecnologias utilizadas
 
-| Tecnologías   | Requerida     | Opcional  	| Documentacion |
-| ------------- |:-------------:|:-----------:|-----------|
-| NodeJs        | 	    x       |  	        	|      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
-| ReactJs       | 	    x 	    |  	        	|      [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html) |
-| Sagas         |  		          |     	x   	|      [https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga) |
-| Redux         |  		          |     	x   	|      [https://redux.js.org/](https://redux.js.org/) |
-| Axios         |  		          |     	x   	|      [https://github.com/axios/axios](https://github.com/axios/axios) |
-| Redux-sagas   |  		          |    	  x   	|      [https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
-| Express       |  		          |     	x   	|      [http://expressjs.com/es/](http://expressjs.com/es/) |
-| Bem Css       |  		          |     	x   	|      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
+| Tecnologías   | Documentacion |
+| ------------- |-----------|
+| NodeJs        |      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
+| ReactJs       |      [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html) |
+| Sagas         |      [https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga) |
+| Redux         |      [https://redux.js.org/](https://redux.js.org/) |
+| Axios         |      [https://github.com/axios/axios](https://github.com/axios/axios) |
+| Redux-sagas   |      [https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
+| Express       |      [http://expressjs.com/es/](http://expressjs.com/es/) |
+| Bem Css       |      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
+| React Redux       |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
+
+### Uso de components
+Los compoents los usamos para poner el codigo html, se localiza en la carpeta compoenents y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
+
+```
+
+import React, { Component } from 'react'
+
+import { Grid, Row, Form, FormGroup, Col, Checkbox, ControlLabel, Button, FormControl, Panel } from 'react-bootstrap'
+
+import './FormLogin.css'
+
+
+class FormLogin extends Component {
+  contructor(props){
+    this.setState({
+      username: null,
+      password: null
+    })
+  }
+  onInputChange(e){
+    this.setState({[e.target.id]: e.target.value})
+  }
+  onSubmit(e){
+    e.preventDefault()
+    this.props.onSubmit(this.state)
+  }
+  render() {
+    const { username, password } = this.state || { username: "", password: "" }
+
+    return (
+<div className="container">
+  <div className="row">
+    <div className="col-sm-6 col-md-4 col-md-offset-4">
+      <h1 className="text-center FormLogin__Title">Sign in</h1>
+        <div className="FormLogin__Wall">
+          <img className="FormLogin__ProfileImage" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+              alt="" />
+          <Form className="FormLogin" onSubmit={ this.onSubmit.bind(this) } >
+            <FormControl className="FormLogin__Input FormLogin__Input--email" type="text" id="email" placeholder="Email" value={ username } onChange = { this.onInputChange.bind(this) } />
+            <FormControl className="FormLogin__Input FormLogin__Input--password" type="password" id="password" placeholder="Password" value={ username } onChange = { this.onInputChange.bind(this) } />
+            <Button type="submit"  className="btn-lg btn-primary btn-block">Sign in</Button>
+            <Checkbox className='FormLogin__Rememberme__Input'>Remember me</Checkbox>
+            <a href="#" className="pull-right FormLogin__NeedHelp">Need help? </a>
+            <span class="clearfix"></span>
+          </Form>
+        </div>
+      <a href="#" className="text-center FormLogin__NewAccount">Create an account </a>
+    </div>
+  </div>
+</div>
+    )
+  }
+}
+
+export default FormLogin
+```
+Es importante tener encuenta que si el componente tiene logica de programacion esta debe ser escrita en los contenedores,
+
+
+### Uso de containers
+
+Los compoents los usamos para poner el codigo javascript o la logica de los compoentes.
+```
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as authActions from '../actions/authActions'
+
+import FormLoginComponent from '../../components/Elements/FormLogin/FormLoginComponent'
+
+
+class FormLoginContainer extends Component {
+  render() {
+    return (
+    <FormLoginComponent {...this.props} />
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+	return {
+
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: {
+      auth: bindActionCreators(authActions, dispatch),
+    }
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
+
+```
 
 ### Bem css (Escritura css)
 
