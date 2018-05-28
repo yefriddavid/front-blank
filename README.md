@@ -115,23 +115,23 @@ src/
 ├── history  
 │   └── Middlewares  
 ├── http  
-│   └── Middlewares
-├── img
-├── js
-├── reducers
-├── routes
-├── sagas
-│   ├── internal
-│   │   └── sagaHelpers
-│   └── Services
-│       └── Providers
-│           └── Api
-├── services
-│   └── providers
-│       └── Api
-├── statics
-├── store
-└── utils
+│   └── Middlewares  
+├── img  
+├── js  
+├── reducers  
+├── routes  
+├── sagas  
+│   ├── internal  
+│   │   └── sagaHelpers  
+│   └── Services  
+│       └── Providers  
+│           └── Api  
+├── services 
+│   └── providers  
+│       └── Api  
+├── statics  
+├── store  
+└── utils  
 
 
 
