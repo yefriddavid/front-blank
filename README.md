@@ -13,12 +13,13 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 * [Tecnologías utilizadas](#tecnologías-utilizadas)
 * [Uso de componentes](#uso-de-componentes)
 * [Uso de containers](#uso-de-containers)
-* [Bem css (Escritura css)](#bem-css-escritura-css)
-* [References](#references)
 * [Api calls](#Api_calls)
 * [Sagas](#Sagas)
 * [Sockets](#Sockets)
 * [Store](#Store)
+* [Bem css (Escritura css)](#bem-css-escritura-css)
+* [References](#references)
+
 
 ### Instalar libreria de componentes microvoz en un proyecto
 
@@ -198,6 +199,20 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
 
 ```
+
+### Api calls
+```
+```
+### Sagas
+```
+```
+### Sockets
+```
+```
+### Store
+```
+```
+
 
 ### Bem css (Escritura css)
 Patron de desarrollo **CSS** para los componentes
