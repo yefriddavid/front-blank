@@ -118,7 +118,7 @@ Los componentes los usamos para poner el código html, se localiza en la carpeta
 
 
 ```JS
-#!FormLoginComponent.js
+#!compoents/FormLogin/FormLoginComponent.js
 
 import React, { Component } from 'react'
 
@@ -159,7 +159,10 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
+
 ```CSS
+#!compoents/FormLogin/FormLogin.css
+
 .FormLogin{
 
 }
