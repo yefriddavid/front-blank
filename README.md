@@ -1,9 +1,9 @@
-# Patron de diseño Microvoz Front-End con React y Sagas
+# Patrón de diseño Microvoz Front-End con React y Sagas
 
 
 
 
-### instalar libreria de componentes microvoz en un proyecto
+### Instalar libreria de componentes microvoz en un proyecto
 
 ```
 
@@ -25,7 +25,7 @@ create-react-app projectname
 npm start
 ```
 
-### Instalar un prouyecto e iniciarlo
+### Instalar un proyecto e iniciarlo
 ```
 npm install
 npm start
@@ -54,9 +54,9 @@ $ npm install pm2 -g
 $ nvm current // 9.2.0
 ```
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
-| Tecnologías   | Documentacion |
+| Tecnologías   | Documentación |
 | ------------- |-----------|
 | NodeJs        |      [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/). |
 | ReactJs       |      [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html) |
@@ -68,8 +68,8 @@ $ nvm current // 9.2.0
 | Bem Css       |      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
 | React Redux       |      [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) |
 
-### Uso de components
-Los compoents los usamos para poner el codigo html, se localiza en la carpeta compoenents y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
+### Uso de componentes
+Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
 
 ```
 
@@ -112,12 +112,12 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
-Es importante tener encuenta que si el componente tiene logica de programacion esta debe ser escrita en los contenedores,
+NOTA: Es importante tener encuenta que si el componente tiene lógica de programación, esta debe ser escrita en los contenedores.
 
 
 ### Uso de containers
 
-Los compoents los usamos para poner el codigo javascript o la logica de los compoentes.
+Los componentes los usamos para poner el código javascript o la lógica de los componentes.
 ```
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
