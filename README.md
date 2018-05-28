@@ -15,8 +15,7 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 * [Uso de containers](#uso-de-containers)
 * [Bem css (Escritura css)](#bem-css-escritura-css)
 * [References](#references)
-
-* [Api calls](#Api calls)
+* [Api calls](#Api_calls)
 * [Sagas](#Sagas)
 
 
