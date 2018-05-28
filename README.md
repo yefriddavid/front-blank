@@ -158,10 +158,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
 
 
 ```CSS
-BlockName
-BlockName__element
-BlockName__element__grandchildren
-BlockName--modifier
+.BlockName
+.BlockName__element
+.BlockName__element__grandchildren
+.BlockName--modifier
 
 
 .form { }
