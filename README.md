@@ -31,7 +31,11 @@ foo@bar:~$ git config --global url."https://${GITHUB_TOKEN}@github.com/".instead
 
 ```json
 "dependencies": {
-"GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git"
+"GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git",
+"callcenter2_react_components": "github:microvoz/callcenter2_react_components",
+"callcenter2_react_components": "github:microvoz/callcenter2_react_components#branchName",
+"callcenter2_react_components": "file:../callcenter2_react_components",
+
 }
 ```
 
