@@ -1,4 +1,7 @@
 # Patrón de diseño Microvoz Front-End con React y Sagas
+Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **Microvoz** en el que utilizamos tecnologias React, sagas, redux, entre otras para la conección a las diferetes api's que de uso interno de las aplicaciones.
+
+
 
 
 ### Tabla de Contenido
@@ -124,7 +127,7 @@ class FormLogin extends Component {
 
 export default FormLogin
 ```
-NOTA: Es importante tener encuenta que si el componente tiene lógica de programación, esta debe ser escrita en los contenedores.
+**NOTA**: Es importante tener encuenta que si el componente tiene lógica de programación, esta debe ser escrita en los contenedores.
 
 
 ### Uso de containers
