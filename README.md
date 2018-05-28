@@ -74,6 +74,14 @@ foo@bar:~$ nvm alias default 9.2.0
 foo@bar:~$ npm install pm2 -g
 foo@bar:~$ nvm current // 9.2.0
 ```
+### Variables de Configuración
+Las variables de configuración se definen en el archivo **./.env** con el prefijo **REACT_APP_** y para tener acceso a ellas es necesario ejecutar el comando **npm run build**
+```console
+REACT_APP_API_ENDPOINT=http://foo.bar/api
+```
+
+
+
 
 ### Tecnologías utilizadas
 
