@@ -223,7 +223,7 @@ export function collection() {
 }
 ```
 ### Sagas
-```
+```JS
 #!src/sagas/Services/Providers/Api/Users.js
 
 import * as apiUsers from '../../../../services/providers/Api/Users'
