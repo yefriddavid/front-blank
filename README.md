@@ -194,7 +194,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormLoginContainer)
     type="submit" />
 </form>
 ```
-tree -d
+tree -d  
 src/  
 ├── [actions](https://redux.js.org/basics/actions "actions!")  
 ├── [components](https://reactjs.org/docs/components-and-props.html "Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.")  
