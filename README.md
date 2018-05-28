@@ -86,7 +86,7 @@ docker-compose.yml
 
 
 ### Variables de Configuración
-Las variables de configuración se definen en el archivo **./.env** con el prefijo **REACT_APP_** y para tener acceso a ellas es necesario ejecutar el comando **npm run build**
+Las variables de configuración se definen en el archivo **./.env** con el prefijo **REACT_APP_** y para tener acceso a ellas es necesario ejecutar el comando **npm run build**, posteriormente se invocan asi: **process.env.REACT_APP_API_ENDPOINT**
 ```console
 REACT_APP_API_ENDPOINT=http://foo.bar/api
 ```
