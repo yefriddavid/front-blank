@@ -20,17 +20,20 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 
 ### Instalar libreria de componentes microvoz en un proyecto
 
+```console
+
+foo@bar:~$ npm install microvoz/callcenter2_react_components --save
+foo@bar:~$ git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@github.com:
+
+
+
 ```
 
-npm install microvoz/callcenter2_react_components --save
-git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf git@github.com:
-
+```json
 "dependencies": {
 "GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git"
 }
-
 ```
-
 
 
 ### Crear e instalar un proyecto desde cero
