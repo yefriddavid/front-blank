@@ -63,9 +63,10 @@ $ nvm current // 9.2.0
 | Redux         |  		          |     	x   	|      [https://redux.js.org/](https://redux.js.org/) |
 | Axios         |  		          |     	x   	|      [https://github.com/axios/axios](https://github.com/axios/axios) |
 | Redux-sagas   |  		          |    	  x   	|      [https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html) |
-| Express       |  		          |     	x   	|      [http://expressjs.com/es/](http://expressjs.com/es/)
+| Express       |  		          |     	x   	|      [http://expressjs.com/es/](http://expressjs.com/es/) |
+| Bem Css       |  		          |     	x   	|      [http://getbem.com/introduction/](http://getbem.com/introduction/) |
 
-### Bem css
+### Bem css (Escritura css)
 
 
 ```
@@ -107,7 +108,8 @@ src/
 │   │   └── Guest  
 │   ├── LoginPage  
 │   └── UsersPage  
-├── containers  
+├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
+)  
 │   ├── Layouts 
 │   └── Modules  
 ├── css  
@@ -142,6 +144,6 @@ src/
 ```
 https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
 https://github.com/krasimir/react-in-patterns
-
+http://getbem.com/introduction/
 
 ```
