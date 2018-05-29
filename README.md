@@ -115,11 +115,13 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 |Reactstrap     |[https://reactstrap.github.io/](https://reactstrap.github.io/)|
 |Socket io client|[https://github.com/socketio/socket.io-client](https://github.com/socketio/socket.io-client) |
 
+
 ### React References
+
 
 Referencias react
 | Conseptos   | Referencia |
-| ------------- |---------------|
+| ----------- |------------|
 | Events        |[https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html) |
 
 
