@@ -22,7 +22,7 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 
 
 ### Instalar libreria de componentes microvoz en un proyecto
-
+Hay dos formas de incluir nuestra libreria de componentes en los proyectos.
 ```console
 
 foo@bar:~$ npm install microvoz/callcenter2_react_components --save
@@ -63,6 +63,10 @@ foo@bar:~$ npm run build
 foo@bar:~$ cd rootProject/build
 ```
 
+Para actualizar las dependencias del mismo.
+```console
+foo@bar:~$ npm update
+```
 
 
 
