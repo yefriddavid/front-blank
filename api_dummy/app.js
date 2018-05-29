@@ -1,10 +1,10 @@
-
-
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const jsonDb = require('node-json-db')
 const dbUsers = new jsonDb('data/apiwebdb', true, false)
+//const proxy = require('http-proxy-middleware')
+const vhost = require("vhost")
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -79,7 +79,13 @@ router.delete('users/delete/:id_user', (req, rest) => {
   })
 })
 
-app.use('/api', router);
+
+
+const appFrontDev = vhost("127.0.0.1",express.static("../build"));
+
+app.use('/api', router)
+app.use(appFrontDev)
+
 
 app.listen(port);
-console.log('Server Runing on port ' + port);
+//console.log('Server Runing on port ' + port);
