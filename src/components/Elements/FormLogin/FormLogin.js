@@ -23,26 +23,26 @@ class FormLogin extends Component {
     const { username, password } = this.state || { username: "", password: "" }
 
     return (
-<div className="container">
-  <div className="row">
-    <div className="col-sm-6 col-md-4 col-md-offset-4">
-      <h1 className="text-center FormLogin__Title">Sign in</h1>
-        <div className="FormLogin__Wall">
-          <img className="FormLogin__ProfileImage" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-              alt="" />
-          <Form className="FormLogin" onSubmit={ this.onSubmit.bind(this) } >
-            <FormControl className="FormLogin__Input FormLogin__Input--email" type="text" id="email" placeholder="Email" value={ username } onChange = { this.onInputChange.bind(this) } />
-            <FormControl className="FormLogin__Input FormLogin__Input--password" type="password" id="password" placeholder="Password" value={ username } onChange = { this.onInputChange.bind(this) } />
-            <Button type="submit"  className="btn-lg btn-primary btn-block">Sign in</Button>
-            <Checkbox className='FormLogin__Rememberme__Input'>Remember me</Checkbox>
-            <a href="#" className="pull-right FormLogin__NeedHelp">Need help? </a>
-            <span class="clearfix"></span>
-          </Form>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 className="text-center FormLogin__Title">Sign in</h1>
+              <div className="FormLogin__Wall">
+                <img className="FormLogin__ProfileImage" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="" />
+                <Form className="FormLogin" onSubmit={ this.onSubmit.bind(this) } >
+                  <FormControl className="FormLogin__Input FormLogin__Input--email" type="text" id="email" placeholder="Email" value={ username } onChange = { this.onInputChange.bind(this) } />
+                  <FormControl className="FormLogin__Input FormLogin__Input--password" type="password" id="password" placeholder="Password" value={ username } onChange = { this.onInputChange.bind(this) } />
+                  <Button type="submit"  className="btn-lg btn-primary btn-block">Sign in</Button>
+                  <Checkbox className='FormLogin__Rememberme__Input'>Remember me</Checkbox>
+                  <a href="#" className="pull-right FormLogin__NeedHelp">Need help? </a>
+                  <span class="clearfix"></span>
+                </Form>
+              </div>
+            <a href="#" className="text-center FormLogin__NewAccount">Create an account </a>
+          </div>
         </div>
-      <a href="#" className="text-center FormLogin__NewAccount">Create an account </a>
-    </div>
-  </div>
-</div>
+      </div>
     )
   }
 }

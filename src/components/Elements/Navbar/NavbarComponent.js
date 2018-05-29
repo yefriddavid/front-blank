@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom'
 
 import './Navbar.css'
+import { RouteNames } from '../../../routes/Miscellany.js'
 
 
 class Navbar extends Component {
@@ -12,11 +13,13 @@ class Navbar extends Component {
 
     return (
         <div id="sidebar-wrapper">
-           <ul className="sidebar-nav nav-pills nav-stacked" id="menu">
+           <ul className={`sidebar-nav nav-pills nav-stacked` } id="menu">
               <li className="active">
-                <NavLink to="/app/home"><span className="fa-stack fa-lg pull-left"><i className="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</NavLink>
+                <NavLink to={ RouteNames.home }><span className="fa-stack fa-lg pull-left"><i className="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</NavLink>
                    <ul className="nav-pills nav-stacked" style={{"listStyleType":"none"}}>
-                     <li><NavLink to="/app/users">Usuarios</NavLink></li>
+                      <li>
+                       <NavLink to= { RouteNames.users }>Usuarios</NavLink>
+                      </li>
                      <li><NavLink to="/app/profiles">Perfiles</NavLink></li>
                  </ul>
               </li>
