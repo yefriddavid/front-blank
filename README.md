@@ -391,5 +391,6 @@ https://github.com/krasimir/react-in-patterns
 http://getbem.com/introduction/
 https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
 https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010
+https://www.npmjs.com/package/react-collapse
 
 ```
