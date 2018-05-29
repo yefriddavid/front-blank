@@ -116,11 +116,11 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 ### Uso de componentes
 Deben ser clases en lo posible autonomas y reusables desde cualquier parte de la aplicacion e incluso desde otras aplicaciones para ver mas de click en el siguiete [link](https://reactjs.org/docs/react-component.html).
 
-Los componentes los usamos para poner el código html, se localiza en la carpeta compoenentes y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
+Los componentes los usamos para poner el código html, se localiza en la carpeta **components** y se nombra con letra capital, ejemplo, si tenemos el componente FormLogin, tendriamos algo asi:
 
 
 ```JS
-#!compoents/FormLogin/FormLoginComponent.js
+#!components/FormLogin/FormLoginComponent.js
 
 import React, { Component } from 'react'
 
