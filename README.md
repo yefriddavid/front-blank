@@ -120,10 +120,11 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 
 
 Referencias react
+
 | Conseptos   | Referencia |
 | ----------- |------------|
-| Events        |[https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html) |
-
+| Events      |[https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html) |
+| Condicional rendering|[https://reactjs.org/docs/conditional-rendering.html](https://reactjs.org/docs/conditional-rendering.html)
 
 ### Uso de componentes
 Deben ser clases en lo posible autonomas y reusables desde cualquier parte de la aplicacion e incluso desde otras aplicaciones para ver mas de click en el siguiete [link](https://reactjs.org/docs/react-component.html).
