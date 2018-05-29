@@ -116,6 +116,15 @@ Algunas de las tecnologias usagas por las aplicaciones internas.
 |Socket io client|[https://github.com/socketio/socket.io-client](https://github.com/socketio/socket.io-client) |
 
 
+### React References
+
+
+Referencias react
+
+| Conseptos   | Referencia |
+| ----------- |------------|
+| Events      |[https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html) |
+| Condicional rendering|[https://reactjs.org/docs/conditional-rendering.html](https://reactjs.org/docs/conditional-rendering.html)
 
 ### Uso de componentes
 Deben ser clases en lo posible autonomas y reusables desde cualquier parte de la aplicacion e incluso desde otras aplicaciones para ver mas de click en el siguiete [link](https://reactjs.org/docs/react-component.html).
@@ -381,5 +390,7 @@ https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.
 https://github.com/krasimir/react-in-patterns
 http://getbem.com/introduction/
 https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
+https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010
+https://www.npmjs.com/package/react-collapse
 
 ```
