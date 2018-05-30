@@ -13,12 +13,13 @@ export default class UsersPage extends Component {
         details = (
           <tbody>
             {items.map(function(row, item){
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
+              return (<tr>
+                <th scope="row"> { item + 1 } </th>
+                <td>{row.firstName}</td>
+                <td>{ row.lastName }</td>
+                <td>{ row.userName }</td>
+                <td> iconos </td>
+              </tr>)
             })}
           </tbody>
       )
@@ -41,8 +42,10 @@ export default class UsersPage extends Component {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
+            <th>Acciones</th>
           </tr>
         </thead>
+          { details }
           {/*
         </tbody>
           <tr>
@@ -66,7 +69,6 @@ export default class UsersPage extends Component {
         </tbody>
               */}
       </Table>
-          { details }
       </ContentSectionComponent>
     )
   }

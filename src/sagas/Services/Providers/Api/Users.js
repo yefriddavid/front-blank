@@ -9,12 +9,9 @@ export function* collection() {
     const { payload } = yield take(`${usersActions.collection}`);
     try{
       yield put(usersActions.requestCollection())
-      alert("ssssaaa")
       const response = yield call(apiUsers.collection, payload)
-
       yield put(usersActions.receivedCollection(response))
     } catch(e){
-      alert("ssss")
       yield put(usersActions.errorRequestCollection(e))
     }
   }

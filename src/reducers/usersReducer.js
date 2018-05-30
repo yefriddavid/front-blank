@@ -24,7 +24,8 @@ const collection = createReducer({
   [userActions.receivedCollection]: (state, payload) => {
     return { ...state,
       isFetching: false,
-      payload,
+      response: payload,
+      payload: payload.data,
     }
   },
   [userActions.errorRequestCollection]: (state, payload) => {
