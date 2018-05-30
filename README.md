@@ -338,46 +338,46 @@ Patron de desarrollo **CSS** para los componentes
     type="submit" />
 </form>
 ```
-tree -d  
-src/  
-├── [actions](https://redux.js.org/basics/actions "actions!")  
-├── [components](https://reactjs.org/docs/components-and-props.html "Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.")  
-│   ├── Elements  
-│   │   ├── ContentSection  
-│   │   ├── FormLogin  
-│   │   ├── Navbar  
-│   │   └── Spinner  
-│   ├── HomePage  
-│   ├── Layouts  
-│   │   ├── Friendly  
-│   │   └── Guest  
-│   ├── LoginPage  
-│   └── UsersPage  
-├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)  
-│   ├── Layouts  
-│   └── Modules  
-├── css  
-├── fonts  
-├── history  
-│   └── Middlewares  
-├── http  
-│   └── Middlewares  
-├── img  
-├── js  
-├── [reducers](https://redux.js.org/basics/reducers)  
-├── routes  
-├── [sagas](https://github.com/barbuza/react-saga)  
-│   ├── internal  
-│   │   └── sagaHelpers  
-│   └── Services  
-│       └── Providers  
-│           └── Api  
-├── Services  
-│   └── Providers  
-│       └── Api  
-├── statics  
-├── [store](https://redux.js.org/api-reference/store)  
-└── utils  
+tree -d
+src/
+├── [actions](https://redux.js.org/basics/actions "actions!")
+├── [components](https://reactjs.org/docs/components-and-props.html "Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.")
+│   ├── Elements
+│   │   ├── ContentSection
+│   │   ├── FormLogin
+│   │   ├── Navbar
+│   │   └── Spinner
+│   ├── HomePage
+│   ├── Layouts
+│   │   ├── Friendly
+│   │   └── Guest
+│   ├── LoginPage
+│   └── UsersPage
+├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)
+│   ├── Layouts
+│   └── Modules
+├── css
+├── fonts
+├── history
+│   └── Middlewares
+├── http
+│   └── Middlewares
+├── img
+├── js
+├── [reducers](https://redux.js.org/basics/reducers)
+├── routes
+├── [sagas](https://github.com/barbuza/react-saga)
+│   ├── internal
+│   │   └── sagaHelpers
+│   └── Services
+│       └── Providers
+│           └── Api
+├── Services
+│   └── Providers
+│       └── Api
+├── statics
+├── [store](https://redux.js.org/api-reference/store)
+└── utils
 
 
 
@@ -386,11 +386,13 @@ src/
 ### References
 
 
-https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md  
-https://github.com/krasimir/react-in-patterns  
-http://getbem.com/introduction/  
-https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json  
-https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010  
-https://www.npmjs.com/package/react-collapse  
-https://medium.com/@viacheslavlushchinskiy/real-time-data-with-redux-saga-event-channels-and-socket-io-ad6e64dbefd9  
+https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
+https://github.com/krasimir/react-in-patterns
+http://getbem.com/introduction/
+https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
+https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010
+https://www.npmjs.com/package/react-collapse
+https://medium.com/@viacheslavlushchinskiy/real-time-data-with-redux-saga-event-channels-and-socket-io-ad6e64dbefd9
+npm install webpack@3.1.0 --save-dev
+
 
