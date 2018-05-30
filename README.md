@@ -385,12 +385,12 @@ src/
 
 ### References
 
-```
-https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
-https://github.com/krasimir/react-in-patterns
-http://getbem.com/introduction/
-https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
-https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010
-https://www.npmjs.com/package/react-collapse
 
-```
+https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md  
+https://github.com/krasimir/react-in-patterns  
+http://getbem.com/introduction/  
+https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json  
+https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010  
+https://www.npmjs.com/package/react-collapse  
+https://medium.com/@viacheslavlushchinskiy/real-time-data-with-redux-saga-event-channels-and-socket-io-ad6e64dbefd9  
+
