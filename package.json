@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "callcenter2_react_components": "github:microvoz/callcenter2_react_components",
     "classnames": "^2.2.5",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
