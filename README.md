@@ -33,6 +33,7 @@ foo@bar:~$ git config --global url."https://${GITHUB_TOKEN}@github.com/".instead
 "dependencies": {
   "GitRepo": "git+https://<token-from-github>:x-oauth-basic@github.com/<user>/<GitRepo>.git",
   "callcenter2_react_components": "github:microvoz/callcenter2_react_components",
+  "callcenter2_react_components": "git+ssh://git@github.com:microvoz/callcenter2_react_components.git#2.1",
   "callcenter2_react_components": "github:microvoz/callcenter2_react_components#branchName",
   "callcenter2_react_components": "file:../callcenter2_react_components",
 }
@@ -133,6 +134,12 @@ Referencias react
 | ----------- |------------|
 | Events      |[https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html) |
 | Condicional rendering|[https://reactjs.org/docs/conditional-rendering.html](https://reactjs.org/docs/conditional-rendering.html)
+| actions     |[https://redux.js.org/basics/actions] (https://redux.js.org/basics/actions "actions!")
+| components  |[https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html "Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.")
+| containers  |[https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)
+| reducers    |[https://redux.js.org/basics/reducers](https://redux.js.org/basics/reducers)
+| sagas       |[https://github.com/barbuza/react-saga](https://github.com/barbuza/react-saga)
+| store       |[https://redux.js.org/api-reference/store](https://redux.js.org/api-reference/store)
 
 ### Uso de componentes
 Deben ser clases en lo posible autonomas y reusables desde cualquier parte de la aplicacion e incluso desde otras aplicaciones para ver mas de click en el siguiete [link](https://reactjs.org/docs/react-component.html).
@@ -346,10 +353,12 @@ Patron de desarrollo **CSS** para los componentes
     type="submit" />
 </form>
 ```
+
+```
 tree -d
 src/
-├── [actions](https://redux.js.org/basics/actions "actions!")
-├── [components](https://reactjs.org/docs/components-and-props.html "Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.")
+├── actions
+├── components
 │   ├── Elements
 │   │   ├── ContentSection
 │   │   ├── FormLogin
@@ -361,7 +370,7 @@ src/
 │   │   └── Guest
 │   ├── LoginPage
 │   └── UsersPage
-├── [containers](https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md)
+├── containers
 │   ├── Layouts
 │   └── Modules
 ├── css
@@ -372,9 +381,9 @@ src/
 │   └── Middlewares
 ├── img
 ├── js
-├── [reducers](https://redux.js.org/basics/reducers)
+├── reducers
 ├── routes
-├── [sagas](https://github.com/barbuza/react-saga)
+├── sagas
 │   ├── internal
 │   │   └── sagaHelpers
 │   └── Services
@@ -384,8 +393,9 @@ src/
 │   └── Providers
 │       └── Api
 ├── statics
-├── [store](https://redux.js.org/api-reference/store)
+├── store
 └── utils
+```
 
 
 
@@ -405,6 +415,8 @@ npm install webpack@3.1.0 --save-dev
 https://yarnpkg.com/lang/en/docs/install/#debian-stable
 https://esausilva.com/2017/11/14/how-to-use-create-react-app-with-a-node-express-backend-api/
 https://esausilva.com/2018/01/13/learn-webpack-for-react/#more-2821
+
+docker run --rm -v $(pwd):/app -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub  -w /app mhart/alpine-node npm install
 
 
 

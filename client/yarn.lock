@@ -1304,8 +1304,9 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
-"callcenter2_react_components@file:../../callcenter2_react_components":
-  version "1.0.1"
+"callcenter2_react_components@git+ssh://git@github.com:microvoz/front_blank.git":
+  version "0.0.0"
+  resolved "git+ssh://git@github.com:microvoz/front_blank.git#d2dffd9a0b0e44d4507ff1cbf3a2eea5929a57a1"
 
 caller-path@^0.1.0:
   version "0.1.0"

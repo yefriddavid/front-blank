@@ -15,7 +15,7 @@ services:
     restart: 'no'
     image: mhart/alpine-node
     volumes:
-      - ./webapp:/app
+      - ./client:/app
     command:
       - yarn
       - install
