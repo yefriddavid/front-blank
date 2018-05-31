@@ -38,6 +38,14 @@ foo@bar:~$ git config --global url."https://${GITHUB_TOKEN}@github.com/".instead
 }
 ```
 
+### Manejadores
+```
+yarn or npm
+yarn add
+npm install
+
+```
+
 
 ### Crear e instalar un proyecto desde cero
 Como crear un proyecto desde cero y como iniciarlo en react con la ayuda de **create-react-app**
@@ -394,5 +402,7 @@ https://codepen.io/helloHKTK/pen/PKRrpw?editors=1010
 https://www.npmjs.com/package/react-collapse
 https://medium.com/@viacheslavlushchinskiy/real-time-data-with-redux-saga-event-channels-and-socket-io-ad6e64dbefd9
 npm install webpack@3.1.0 --save-dev
+https://yarnpkg.com/lang/en/docs/install/#debian-stable
+
 
 
