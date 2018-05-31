@@ -403,6 +403,9 @@ https://www.npmjs.com/package/react-collapse
 https://medium.com/@viacheslavlushchinskiy/real-time-data-with-redux-saga-event-channels-and-socket-io-ad6e64dbefd9
 npm install webpack@3.1.0 --save-dev
 https://yarnpkg.com/lang/en/docs/install/#debian-stable
+https://esausilva.com/2017/11/14/how-to-use-create-react-app-with-a-node-express-backend-api/
+https://esausilva.com/2018/01/13/learn-webpack-for-react/#more-2821
+
 
 
 

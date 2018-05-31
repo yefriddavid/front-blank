@@ -2,14 +2,14 @@
   "name": "api",
   "version": "1.0.0",
   "main": "app.js",
+  "author": "yefriddavid@gmail.com",
+  "license": "ISC",
   "scripts": {
     "server": "nodemon app.js",
     "client": "cd ../client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
