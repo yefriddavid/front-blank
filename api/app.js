@@ -9,7 +9,7 @@ const vhost = require("vhost")
 const app = express()
 const port = process.env.PORT || 8080
 const router = express.Router()
-const appFrontDev = vhost("localhost",express.static("../../build"))
+const appFrontDev = vhost("localhost",express.static("../client/build"))
 
 app.use(bodyParser.urlencoded({
   extended: true

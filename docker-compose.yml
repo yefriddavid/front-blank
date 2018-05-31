@@ -1,0 +1,63 @@
+version: '2'
+services:
+  installapi:
+    working_dir: /app
+    restart: 'no'
+    image: mhart/alpine-node
+    command:
+      - yarn
+      - install
+    volumes:
+      - ./api:/app
+
+  installwebapp:
+    working_dir: /app
+    restart: 'no'
+    image: mhart/alpine-node
+    volumes:
+      - ./webapp:/app
+    command:
+      - yarn
+      - install
+
+  devmode:
+    container_name: admindev
+    working_dir: /app/api
+    image: mhart/alpine-node
+    ports:
+      - 3005:3000
+      - 8080:8080
+    command:
+      - yarn
+      - dev
+    volumes:
+      - ./:/app
+        #    networks:
+        #      admin_app:
+        #        ipv4_address: 173.17.2.20
+
+  #build:
+  prodmode:
+    container_name: adminprod
+    working_dir: /app/api
+    image: mhart/alpine-node
+    ports:
+      - 80:8080
+    command:
+      - yarn
+      - start
+    volumes:
+      - ./:/app
+        #    networks:
+        #      admin_app:
+        #        ipv4_address: 173.17.2.21
+
+networks:
+  admin_app:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 173.17.2.0/16
+    driver_opts:
+      "com.docker.network.bridge.name": "admin-app"
