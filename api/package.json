@@ -1,8 +1,11 @@
 {
-  "name": "api_dummy",
+  "name": "api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "server": "nodemon app.js",
+    "client": "cd ../client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +20,8 @@
     "uuid": "^3.2.1",
     "vhost": "^3.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
   "description": ""
 }

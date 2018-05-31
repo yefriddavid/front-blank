@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
+  "proxy": "http://localhost:8080/",
   "dependencies": {
     "axios": "^0.18.0",
     "callcenter2_react_components": "file:../../callcenter2_react_components",
