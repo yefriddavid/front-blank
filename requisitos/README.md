@@ -16,7 +16,7 @@ diseño con los estandares planteados y descritos paso a paso en la siguinte
 documentación.
 
 
-[Documentación de arquitectura](/microvoz/front_blank)
+[Documentación de arquitectura](./microvoz/front_blank)
 
 
 
