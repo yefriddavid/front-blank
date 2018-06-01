@@ -38,10 +38,10 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | 5 | Creación nuevo usurio | Para crear un nuevo registro es necesario dirigirse al modulo de usuarios y dar click en el boton nuevo, posteriormente esto me llevara a una pantalla donde usuario procedera a crear el registro | ![Example](./images/new.png)	|
 | 6 | Guardar nuevo usurio | La creación del usuario debe validar que no exite previamente un registro con el mismo nombre en la base el api, adicionalmente los campos [nombre, email y apellido] son obligatorios | ![Example](./images/save-new.png)	|
 | 7 | Modificar usuario | Para modificar un registro es necesario dar click en el item de la tabla (grilla) de datos sebre el link que el usuario desea modificar | ![Example](./images/alter.png)	|
-| 8 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
-| 9 | Eliminar usurio |  | ![Example](./images/delete.png)	|
-| 10 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
-| 11 | Logout |  | ![Example](./images/home.png)	|
+| 8 | Guardar usurio modificado | Para guardar los cambios de un registro es necesario dar click sobre el boton guardar cambios, y valigar que el email no exista, mostrando un texto por debajo del input que se esta validando o proceder a guardar cambios si los datos son correctos | ![Example](./images/save-alter.png)	|
+| 9 | Eliminar usurio | Para eliminar un registro es necesario ubicarse en el item de la tabla de usuarios en el boton eliminar y proceder a dar click, posteriormente el software solicitara confirmación de la acción. | ![Example](./images/delete.png)	|
+| 10 | Confirmar eliminación de usuario | Es necesario que el usuario confirme previamente si desea eliminar el registro con el mensaje **Desea eliminar el usuario Mauricio Andres Pineda** | ![Example](./images/confirn-delete.png)	|
+| 11 | Logout | Para Salir de la plataforma es necesario dirigirse a la sessión **Perfil** dar click sobre el avatar del usuario y posteriormente click en logout, este debe de enviarlo a la sessión de login. | ![Example](./images/home.png)	|
 
 
 ## Endpoints requeridos para el desarrollo
