@@ -3,7 +3,7 @@
 
 
 ## Se requiere realizar un software con las siguientes características.
-<span style="color:#fff; font-family: 'Bebas Neue'; font-size: 4em;">Realizar una aplicación con la capacidad de insertar, modificar, eliminar
+<span style="color:#fff; font-family: 'Bebas Neue'; font-size: 6em;">Realizar una aplicación con la capacidad de insertar, modificar, eliminar
 y consultar (CRUD) registros sobre una API, dicha apicación debe contener un login para el ingreso a la misma mediante session storage
 que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab.  Es necesario que el desarrollo
 este completamente diseñado en reactJs utilizando
