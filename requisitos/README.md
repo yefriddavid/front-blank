@@ -43,13 +43,13 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 ## Endpoints requeridos para el desarrollo
 
 ```
-http://10.60.0.60:81/api/oauth/token [POST]
-http://10.60.0.60:81/api/oauth/token [DELETE]
-http://10.60.0.60:81/api/users [GET]
-http://10.60.0.60:81/api/users [POST]
-http://10.60.0.60:81/api/users/1 [DELETE]
-http://10.60.0.60:81/api/users/1 [GET]
-http://10.60.0.60:81/api/users/1 [PUT]
+http://apiserver/api/oauth/token [POST]
+http://apiServer/api/oauth/token [DELETE]
+http://apiServer/api/users [GET]
+http://apiServer/api/users [POST]
+http://apiServer/api/users/1 [DELETE]
+http://apiServer/api/users/1 [GET]
+http://apiServer/api/users/1 [PUT]
 
 ```
 
