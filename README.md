@@ -417,6 +417,8 @@ https://esausilva.com/2017/11/14/how-to-use-create-react-app-with-a-node-express
 https://esausilva.com/2018/01/13/learn-webpack-for-react/#more-2821
 
 docker run --rm -v $(pwd):/app -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub  -w /app mhart/alpine-node npm install
+docker run --rm -v $(pwd):/app/front_blank -v /home/david/dave/CUSTOMERS/microvoz/callcenter2_react_components:/app/callcenter2_react_components -w /app/front_blank/client mhart/alpine-node npm install
+yarn install
 
 
 
