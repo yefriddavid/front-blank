@@ -12,51 +12,17 @@ algunos de las siguientes librerias y patrones de desarollo.
 
 
 
-### Arbol de directorio esperado
-```
-./projects/usermanager/
-.
-├── api
-│   ├── app.js
-│   └── package.json
-└── webapp
-    └── package.json
-```
 
-### Librerias requeridas
-```
-reactJs
-```
+### Lenguajes y patrones de diseño que deben ser empleados para el desarrollo de la aplicación.
 
-### Lenguajes que deben ser empleados para el desarrollo de la aplicación
-
-**NodeJs** y **Javascript**
+Para desarrollar esta aplicación es necesario seguir el siguiente patron de
+diseño con los estandares planteados y descritos paso a paso en la siguinte
+documentación.
 
 
-### Libraries empleadas
-
-Para el desarrollo del software se deben emplear las siguientes tecnologias.
+[Documentación](/microvoz/front_blank)
 
 
-Sagas<br />
-Redux <br />
-redux-sagas<br />
-redux-act<br />
-axios  <br />
-react-router-dom<br />
-socket.io-client<br />
-
-
-
-### Metodologías y patrones a emplear
-```
-BEM (Css)
-Ecmascript 5
-Ecmascript 6
-Ecmascript 7
-
-
-```
 
 ### Paso a paso del requerimiento
 
@@ -65,10 +31,10 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 
 | Paso| Nombre  | Descripción   |   Detalle  	  |
 | --- |-------------|:-------------:|:-------------:|
-| 1 | Login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
-| 2 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
+| 1 | Login | Al ingresar en la dirección del navegador **http://localhost:3000** debe mostrarse el login del software, si este cuenta con credenciales en el sistema lo debe redireccionar a la pantalla de inicio. |	![Example](./images/login.png)	|
+| 2 | Login Error |Si los datos son incorrectos deberia mostrarse la siguiente pantalla. | ![Example](./images/login-error.png)	|
 | 3 | Pagina de Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
-| 4 | Paginación | La pantalla donde se listan los usuarios registados del sistema debe permitir paginar y filtrar los registros almacenados en el sistema | ![Example](./images/pagination.png)	|
+| 4 | Paginación | La pantalla donde se listan los usuarios registados del sistema debe permitir paginar y filtrar los registros almacenados en la base de datos | ![Example](./images/pagination.png)	|
 | 5 | Creación nuevo usurio |  | ![Example](./images/new.png)	|
 | 6 | Guardar nuevo usurio |  | ![Example](./images/save-new.png)	|
 | 7 | Modificar usuario |  | ![Example](./images/alter.png)	|
@@ -78,23 +44,28 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | 11 | Logout |  | ![Example](./images/home.png)	|
 
 
+## Endpoints requeridos para el desarrollo
+
+```
+http://10.60.0.60:81/api/oauth/token [POST]
+http://10.60.0.60:81/api/oauth/token [DELETE]
+http://10.60.0.60:81/api/users [GET]
+http://10.60.0.60:81/api/users [POST]
+http://10.60.0.60:81/api/users/1 [DELETE]
+http://10.60.0.60:81/api/users/1 [GET]
+http://10.60.0.60:81/api/users/1 [PUT]
+
+```
 
 
 ### Tener en cuenta
 
-- La solución debe contener estandares, patrones, metodologías conocidas y claras
-de desarrollo las cuales deben estar sustentadas dentro del codigo.
+- Es necesario que tanto los componentes como los contenedores deben estar
+  documentados con una descripción corta y una descripción detallada sobre sus
+  funciones
 
-- El software debe estar escrito en ingles a nivel de codigo y presentación.
+- El software debe estar escrito en ingles a nivel de codigo.
 
-- El repositorio debe contener dos folders con los nombres **api** y **webapp**
-  respectivamente.
-
-- Hostear la aplicación en un repositorio publico de **github**
-sobre la rama **master** y enviar la url al correo **yefriddavid@gmail.com**
-
-- Debe tener encuenta que cuenta con 4 horas para realizar la prueba, que inicia
-  una ves se comparte este enlace.
 
 
 
