@@ -38,13 +38,13 @@ reactJs
 Para el desarrollo del software se deben emplear las siguientes tecnologias.
 
 
-Sagas
+Sagas<br />
 Redux <br />
-redux-sagas
-redux-act
-axios  \n
-react-router-dom
-socket.io-client
+redux-sagas<br />
+redux-act<br />
+axios  <br />
+react-router-dom<br />
+socket.io-client<br />
 
 
 
