@@ -35,13 +35,9 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | 2 | Login Error |Si los datos son incorrectos deberia mostrarse la siguiente pantalla. | ![Example](./images/login-error.png)	|
 | 3 | Pagina de Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
 | 4 | Paginación | La pantalla donde se listan los usuarios registados del sistema debe permitir paginar y filtrar los registros almacenados en la base de datos | ![Example](./images/pagination.png)	|
-| 5 | Creación nuevo usurio | Para crear un nuevo registro es necesario
-dirigirse al modulo de usuarios y dar click en el boton nuevo, posteriormente
-esto me llevara a una pantalla donde usuario procedera a crear el registro | ![Example](./images/new.png)	|
+| 5 | Creación nuevo usurio | Para crear un nuevo registro es necesario dirigirse al modulo de usuarios y dar click en el boton nuevo, posteriormente esto me llevara a una pantalla donde usuario procedera a crear el registro | ![Example](./images/new.png)	|
 | 6 | Guardar nuevo usurio | La creación del usuario debe validar que no exite previamente un registro con el mismo nombre en la base el api, adicionalmente los campos [nombre, email y apellido] son obligatorios | ![Example](./images/save-new.png)	|
-| 7 | Modificar usuario | Para modificar un registro es necesario dar click en
-el item de la tabla (grilla) de datos sebre el link que el usuario desea
-modificar | ![Example](./images/alter.png)	|
+| 7 | Modificar usuario | Para modificar un registro es necesario dar click en el item de la tabla (grilla) de datos sebre el link que el usuario desea modificar | ![Example](./images/alter.png)	|
 | 8 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
 | 9 | Eliminar usurio |  | ![Example](./images/delete.png)	|
 | 10 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
