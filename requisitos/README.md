@@ -65,17 +65,16 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | Paso| Nombre  | Descripción   |   Detalle  	  |
 | --- |-------------|:-------------:|:-------------:|
 | 1 | Login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
-| 3 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
-| 2 | Pagina de Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
-| 4 | Paginación | La pantalla donde se listan los usuarios registados del
-sistema debe permitir paginar y filtrar los registros almacenados en el sistema | ![Example](./images/pagination.png)	|
+| 2 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
+| 3 | Pagina de Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
+| 4 | Paginación | La pantalla donde se listan los usuarios registados del sistema debe permitir paginar y filtrar los registros almacenados en el sistema | ![Example](./images/pagination.png)	|
 | 5 | Creación nuevo usurio |  | ![Example](./images/new.png)	|
-| 5 | Guardar nuevo usurio |  | ![Example](./images/save-new.png)	|
-| 5 | Modificar usuario |  | ![Example](./images/alter.png)	|
-| 5 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
-| 5 | Eliminar usurio |  | ![Example](./images/delete.png)	|
-| 5 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
-| 5 | Logout |  | ![Example](./images.png)	|
+| 6 | Guardar nuevo usurio |  | ![Example](./images/save-new.png)	|
+| 7 | Modificar usuario |  | ![Example](./images/alter.png)	|
+| 8 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
+| 9 | Eliminar usurio |  | ![Example](./images/delete.png)	|
+| 10 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
+| 11 | Logout |  | ![Example](./images.png)	|
 
 david
 
