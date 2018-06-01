@@ -4,9 +4,9 @@
 
 ## Se requiere realizar un software con las siguientes características.
 <span style="color:#fff; font-family: 'Bebas Neue'; font-size: 6em;">Realizar una aplicación con la capacidad de insertar, modificar, eliminar
-y consultar (CRUD) registros sobre una API, dicha apicación debe contener un login para el ingreso a la misma mediante session storage
-que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab.  Es necesario que el desarrollo
-este completamente diseñado en reactJs utilizando
+y consultar (CRUD) registros sobre una API, dicha aplicación, debe contener un login para el ingreso a la misma.
+Es necesario que almacene en Sessión Storage los datos del token en el navegador hasta que el usuario decida salir o cerrar el tab del navegador.
+Se requiere que el desarrollo este completamente diseñado en reactJs utilizando
 algunos de las siguientes librerias y patrones de desarollo.</span>
 
 
