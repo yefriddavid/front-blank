@@ -5,14 +5,14 @@
 
 Realizar una aplicación con la capacidad de insertar, modificar, eliminar
 y consultar (CRUD) registros sobre una API, dicha apicación debe contener un login para el ingreso a la misma mediante session storage
-que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab es necesario
-estar completamente diseñada en reactJs utilizando
+que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab.  Es necesario que el desarrollo
+este completamente diseñado en reactJs utilizando
 algunos de las siguientes librerias y patrones de desarollo.
 
 
 ### Lenguajes y patrones de diseño que deben ser empleados para el desarrollo de la aplicación.
 
-Para desarrollar esta aplicación es necesario seguir el siguiente patron de
+Para desarrollar esta aplicación es necesario seguir los siguientes patrones de
 diseño con los estandares planteados y descritos paso a paso en la siguinte
 documentación.
 
