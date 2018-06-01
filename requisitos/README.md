@@ -74,7 +74,7 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | 8 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
 | 9 | Eliminar usurio |  | ![Example](./images/delete.png)	|
 | 10 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
-| 11 | Logout |  | ![Example](./images.png)	|
+| 11 | Logout |  | ![Example](./images/home.png)	|
 
 david
 
