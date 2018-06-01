@@ -4,13 +4,8 @@
 
 
 Realizar una aplicación con la capacidad de insertar, modificar, eliminar
-y consultar (CRUD) registros sobre una tabla de usuarios con los campos (id, nombre, apellido,
-password, email, estado, teléfono) sobre una base de datos local que puede ser en archivos de tipo (.txt,
-.json u otro).  Todo esto utilizando nodeJs como backend del software, dichos archivos de base de datos deben de
-estar excluidos del repositorio, posteriormente realizar el admin o frontend de la apicación en reactJs utilizando
+y consultar (CRUD) registros sobre una API, dicha apicación debe estar completamente diseñada en reactJs utilizando
 algunos de las siguientes librerias y patrones de desarollo.
-
-
 
 
 ### Lenguajes y patrones de diseño que deben ser empleados para el desarrollo de la aplicación.
