@@ -62,13 +62,19 @@ Ecmascript 7
 A continuación se enumera el paso a paso de que debe hacer el sotfware
 
 
-| Paso| Descripció  | Descripción   |   Detalle  	  |
+| Paso| Nombre  | Descripción   |   Detalle  	  |
 | --- |-------------|:-------------:|:-------------:|
-| 1 | Pantalla de inicio sin login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
-| 2 | |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./example.png) |
-| 3 | |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./example.png)	|
-| 4 | | ![Example](./example.png)	|
-| 5 | |  | ![Example](./example.png)	|
+| 1 | Login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
+| 3 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
+| 2 | Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./example.png) |
+| 4 | Paginación | ![Example](./images/pagination.png)	|
+| 5 | Creación |  | ![Example](./images/new.png)	|
+| 5 | Guardar |  | ![Example](./images/save-new.png)	|
+| 5 | Midificación |  | ![Example](./images/alter.png)	|
+| 5 | Guardar Modificación |  | ![Example](./images/save-alter.png)	|
+| 5 | Eliminación |  | ![Example](./images/delete.png)	|
+| 5 | Confirmar Eliminación |  | ![Example](./images/confirn-delete.png)	|
+| 5 | Logout |  | ![Example](./images.png)	|
 
 david
 
