@@ -66,8 +66,8 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | --- |-------------|:-------------:|:-------------:|
 | 1 | Login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
 | 3 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
-| 2 | Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./example.png) |
-| 4 | Paginación | ![Example](./images/pagination.png)	|
+| 2 | Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
+| 4 | Paginación | | ![Example](./images/pagination.png)	|
 | 5 | Creación |  | ![Example](./images/new.png)	|
 | 5 | Guardar |  | ![Example](./images/save-new.png)	|
 | 5 | Midificación |  | ![Example](./images/alter.png)	|
