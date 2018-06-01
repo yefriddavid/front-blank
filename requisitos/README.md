@@ -1,8 +1,8 @@
 # Desarrollo software administración de usuarios
 
+
+
 ## Se requiere realizar un software con las siguientes características.
-
-
 Realizar una aplicación con la capacidad de insertar, modificar, eliminar
 y consultar (CRUD) registros sobre una API, dicha apicación debe contener un login para el ingreso a la misma mediante session storage
 que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab.  Es necesario que el desarrollo
@@ -11,13 +11,12 @@ algunos de las siguientes librerias y patrones de desarollo.
 
 
 ### Lenguajes y patrones de diseño que deben ser empleados para el desarrollo de la aplicación.
-
 Para desarrollar esta aplicación es necesario seguir los siguientes patrones de
 diseño con los estandares planteados y descritos paso a paso en la siguinte
 documentación.
 
 
-[Documentación](/microvoz/front_blank)
+[Documentación de arquitectura](/microvoz/front_blank)
 
 
 
