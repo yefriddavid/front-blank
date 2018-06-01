@@ -66,14 +66,15 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | --- |-------------|:-------------:|:-------------:|
 | 1 | Login | Al ingresar en la dirección del navegador http://localhost:3000 debe aparecer la pantalla de inicio  |	![Example](./images/login.png)	|
 | 3 | Login Error |Si los datos son incorrectos deberia de aparecer una pantalla similar a esto  | ![Example](./images/login-error.png)	|
-| 2 | Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
-| 4 | Paginación | | ![Example](./images/pagination.png)	|
-| 5 | Creación |  | ![Example](./images/new.png)	|
-| 5 | Guardar |  | ![Example](./images/save-new.png)	|
-| 5 | Midificación |  | ![Example](./images/alter.png)	|
-| 5 | Guardar Modificación |  | ![Example](./images/save-alter.png)	|
-| 5 | Eliminación |  | ![Example](./images/delete.png)	|
-| 5 | Confirmar Eliminación |  | ![Example](./images/confirn-delete.png)	|
+| 2 | Pagina de Inicio |Ingresar usuario y contraseña y validar en el api dichos datos posteriormente el software debe redireccionar al usuario a la pantalla de usuarios del software desde donde podrá modificar, eliminar y consultar un registro  |	![Example](./images/home.png) |
+| 4 | Paginación | La pantalla donde se listan los usuarios registados del
+sistema debe permitir paginar y filtrar los registros almacenados en el sistema | ![Example](./images/pagination.png)	|
+| 5 | Creación nuevo usurio |  | ![Example](./images/new.png)	|
+| 5 | Guardar nuevo usurio |  | ![Example](./images/save-new.png)	|
+| 5 | Modificar usuario |  | ![Example](./images/alter.png)	|
+| 5 | Guardar usurio modificado |  | ![Example](./images/save-alter.png)	|
+| 5 | Eliminar usurio |  | ![Example](./images/delete.png)	|
+| 5 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
 | 5 | Logout |  | ![Example](./images.png)	|
 
 david
@@ -98,10 +99,6 @@ sobre la rama **master** y enviar la url al correo **yefriddavid@gmail.com**
 
 
 
-### La presentación del software debe ser algo aproximado al siguiente ejemplo.
-
-
-![Example](./example.png)
 
 
 
