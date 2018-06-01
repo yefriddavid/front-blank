@@ -3,11 +3,11 @@
 
 
 ## Se requiere realizar un software con las siguientes características.
-Realizar una aplicación con la capacidad de insertar, modificar, eliminar
+<sub>Realizar una aplicación con la capacidad de insertar, modificar, eliminar
 y consultar (CRUD) registros sobre una API, dicha apicación debe contener un login para el ingreso a la misma mediante session storage
 que permita almacenar los datos del token en el navegador hasta que el usuario de decida salir o cerrar el tab.  Es necesario que el desarrollo
 este completamente diseñado en reactJs utilizando
-algunos de las siguientes librerias y patrones de desarollo.
+algunos de las siguientes librerias y patrones de desarollo.</sub>
 
 
 ### Lenguajes y patrones de diseño que deben ser empleados para el desarrollo de la aplicación.
