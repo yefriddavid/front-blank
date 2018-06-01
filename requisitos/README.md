@@ -37,11 +37,12 @@ reactJs
 
 Para el desarrollo del software se deben emplear las siguientes tecnologias.
 
+
 Sagas
-Redux
+Redux <br />
 redux-sagas
 redux-act
-axios
+axios  \n
 react-router-dom
 socket.io-client
 
@@ -76,7 +77,6 @@ A continuación se enumera el paso a paso de que debe hacer el sotfware
 | 10 | Confirmar eliminación de usuario |  | ![Example](./images/confirn-delete.png)	|
 | 11 | Logout |  | ![Example](./images/home.png)	|
 
-david
 
 
 
