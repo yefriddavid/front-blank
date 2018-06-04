@@ -421,5 +421,11 @@ docker run --rm -v $(pwd):/app/front_blank -v /home/david/dave/CUSTOMERS/microvo
 yarn install
 
 
+https://esausilva.com/
+https://medium.freecodecamp.org/
+https://hackernoon.com/
+https://medium.com/
+
+
 
 
