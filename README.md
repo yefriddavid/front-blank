@@ -403,7 +403,7 @@ src/
 
 ### References
 
-
+```
 https://github.com/krasimir/react-in-patterns/blob/master/book/chapter-6/README.md
 https://github.com/krasimir/react-in-patterns
 http://getbem.com/introduction/
@@ -425,6 +425,12 @@ https://esausilva.com/
 https://medium.freecodecamp.org/
 https://hackernoon.com/
 https://medium.com/
+
+https://www.youtube.com/watch?v=_0FHpdMwZFM&list=PLxyfMWnjW2kssQROHucUJiRfW0FUhcVzN
+https://www.youtube.com/watch?v=RZNNu2pO49g&list=PLxyfMWnjW2kuyePV1Gzn5W_gr3BGIZq8G
+https://www.youtube.com/watch?v=bG53Pw17tog&list=PLeWI3XlFEVOX6jACDygzApsvigQiDrun8
+```
+
 
 
 
