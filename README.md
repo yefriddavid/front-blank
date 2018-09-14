@@ -1,5 +1,5 @@
 # Patrón de diseño Microvoz Front-End con React y Sagas
-Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **Microvoz** en el que utilizamos tecnologías tales como: React, sagas, redux, entre otras para la conección a las diferetes api's que de uso interno de las aplicaciones.
+Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **Microvoz** en el que utilizamos tecnologías tales como: React, sagas, redux, entre otras para la conexion a las diferetes api's que de uso interno de las aplicaciones.
 
 
 
