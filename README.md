@@ -326,6 +326,9 @@ export default function configureStore(initialState, browserHistory) {
 
 
 ### Bem css (Escritura css)
+Microvoz, elige utilizar este patrón de diseño orientada al estructuramiento y correcto nombramiento de los objetos a nivel de estilos y deseño de las páginas web, con el fin de tener un standar de trabajo para los desarrolladores maquetadores involucrados
+En el siguiente link encontrará documentación de (interés)[http://getbem.com/naming/]
+
 Patron de desarrollo **CSS** para los componentes
 
 ```CSS
