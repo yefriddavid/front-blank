@@ -6,6 +6,7 @@ Metodologia y patron de diseño para el desarrollo front-end de aplicaciones **M
 
 ### Tabla de Contenido
 
+* [Javascript EC2015](https://www.ecma-international.org/ecma-262/6.0/)
 * [Crear e instalar un proyecto desde cero](#crear-e-instalar-un-proyecto-desde-cero)
 * [Instalar un proyecto e iniciarlo](#instalar-un-proyecto-e-iniciarlo)
 * [Publicar el proyecto](#publicar-el-proyecto)
