@@ -6,6 +6,7 @@
   "license": "ISC",
   "scripts": {
     "server": "nodemon app.js",
+    "start": "node app.js",
     "client": "cd ../client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1"

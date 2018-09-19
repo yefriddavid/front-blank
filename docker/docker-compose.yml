@@ -1,0 +1,50 @@
+version: '2'
+services:
+  router:
+    container_name: router
+    working_dir: /var/www/html
+    image: nginx:1.15.2
+#    logging:
+#      driver: none
+    volumes:
+      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+      - ./config/config.conf:/etc/nginx/conf.d/config.conf
+    ports:
+      - 80:80
+
+  webapi:
+    container_name: webapi
+    image: node:8.11.4
+    working_dir: /app
+    environment:
+      PORT: 80
+    command:
+      - npm
+      - start
+    volumes:
+      - ../api:/app
+
+  webapp:
+    container_name: webapp
+    image: node:8.11.4
+    working_dir: /app
+    environment:
+      PORT: 80
+    command:
+      - yarn
+      - start
+    volumes:
+      - ../client:/app
+
+  websocket:
+    container_name: websocket
+    image: node:8.11.4
+    working_dir: /app
+    environment:
+      PORT: 80
+    command:
+      - npm
+      - start
+    volumes:
+      - ../api:/app
+

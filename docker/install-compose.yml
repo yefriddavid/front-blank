@@ -1,0 +1,22 @@
+version: '2'
+services:
+  installapi:
+    working_dir: /app
+    restart: 'no'
+    image: node:8.11.4
+    command:
+      - yarn
+      - install
+    volumes:
+      - ../api:/app
+
+  installwebapp:
+    working_dir: /app
+    restart: 'no'
+    image: node:8.11.4
+    volumes:
+      - ../client:/app
+    command:
+      - yarn
+      - install
+
