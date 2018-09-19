@@ -15,10 +15,10 @@ export default class UsersPage extends Component {
             {items.map(function(row, item){
               return (<tr>
                 <th scope="row"> { item + 1 } </th>
-                <td>{row.firstName}</td>
-                <td>{ row.lastName }</td>
-                <td>{ row.userName }</td>
-                <td> iconos </td>
+                  <td>{row.firstName}</td>
+                  <td>{ row.lastName }</td>
+                  <td>{ row.userName }</td>
+                  <td> iconos </td>
               </tr>)
             })}
           </tbody>
@@ -31,10 +31,11 @@ export default class UsersPage extends Component {
         </p>
       )
 
-
     return (
       <ContentSectionComponent title="Users">
         <h2>Users</h2>
+        <br />
+        <button className="btn" >Nuevo registro</button>
         <Table hover striped>
         <thead>
           <tr>
@@ -46,28 +47,6 @@ export default class UsersPage extends Component {
           </tr>
         </thead>
           { details }
-          {/*
-        </tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-              */}
       </Table>
       </ContentSectionComponent>
     )

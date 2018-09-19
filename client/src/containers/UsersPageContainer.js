@@ -4,17 +4,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as usersActions from '../actions/users'
 
-
-
 class UsersPageContainer extends Component {
   componentDidMount(){
     this.props.actions.users.collection();
   }
   render() {
-
     return (
       <UsersPageComponent {...this.props} />
-    );
+    )
   }
 }
 
