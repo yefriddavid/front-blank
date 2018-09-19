@@ -13,7 +13,7 @@
     "babel-loader": "7.1.2",
     "babel-preset-react-app": "^3.1.1",
     "babel-runtime": "6.26.0",
-    "callcenter2_react_components": "git+ssh://git@github.com:microvoz/callcenter2_react_components.git",
+    "callcenter2_react_components": "file:../../callcenter2_react_components",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
     "classnames": "^2.2.5",
