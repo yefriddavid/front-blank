@@ -1,10 +1,11 @@
-/* Toggle Styles */
+/* Toggle Styles sss */
 
  .nav-pills>li>a {
     border-radius: 0;
  }
 
- #wrapper {
+ /*#wrapper {*/
+.wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;

@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import NavbarComponent from '../../Elements/Navbar/NavbarComponent'
 import ContentSection from '../../Elements/ContentSection/ContentSectionComponent'
 import cx from 'classnames'
+import styles from './Friendly.css'
 
-import './Friendly.css'
-
+//console.log(styles)
 export default class Friendly extends Component {
   constructor(props){
     super(props)
@@ -38,7 +38,7 @@ export default class Friendly extends Component {
              </ul>
           </div>
        </nav>
-       <div id="wrapper" className={ cx({'toggled-2': this.state.navbarCollapse === true }) }>
+       <div id="wrapper" className={ cx({[styles.wrapper]: true, 'toggled-2': this.state.navbarCollapse === true }) }>
          <NavbarComponent />
 
           <div id="page-content-wrapper">
