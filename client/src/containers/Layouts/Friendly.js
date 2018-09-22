@@ -8,13 +8,16 @@ import FriendlyComponent from '../../components/Layouts/Friendly/FriendlyCompone
 
 
 export default class Friendly extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
     return(
       <FriendlyComponent className="FriendlyLayout">
         <Route exac path="/app/home" component={ HomePage } />
         <Route exac path="/app/users" component={ UsersPage } />
       </FriendlyComponent>
-    );
+    )
   }
 }
 
