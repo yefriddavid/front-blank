@@ -17,6 +17,7 @@ class ChatPage extends Component {
     e.preventDefault()
     const { message } = this.state
     this.props.actions.chat.SendMessage({ message: message })
+    this.setState({message: null})
   }
   onChangeInputMessage = e => {
     this.setState({message: e.target.value})
@@ -25,9 +26,15 @@ class ChatPage extends Component {
     this.props.actions.chat.Connect()
   }
   render() {
-    const { connected } = this.props
+    const { connected, send, receive } = this.props
+
     return (
-      <ChatPageComponent onSubmit= { this.sendMessage } connected={connected} onChangeInputMessage={this.onChangeInputMessage} />
+      <ChatPageComponent
+        onSubmit= { this.sendMessage }
+        receive={receive}
+        send={send}
+        connected={connected}
+        onChangeInputMessage={this.onChangeInputMessage} />
     )
   }
 }
@@ -35,7 +42,10 @@ class ChatPage extends Component {
 
 const mapStateToProps = (state) => {
   const { connected } = state.chat.connect
+  const { send, receive } = state.chat
   return {
+    send,
+    receive,
     connected: connected
   }
 }

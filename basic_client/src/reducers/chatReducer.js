@@ -22,7 +22,7 @@ const initial = {
     errorDetails: {}
   },
   receive: {
-    message: null,
+    messages: [],
     name: null,
     error: false,
     payload: {},
@@ -74,9 +74,12 @@ const connect = createReducer({
 const send = createReducer({
   [chatActions.SendMessage]: (state, payload) => {
     const { messages } = state
+    //alert("acaaaaa")
     messages.push(
         {
-          message: payload.message
+          message: payload.message,
+          type: "out",
+          time: moment().format("h:mm:ss")
         }
     )
 
@@ -116,10 +119,19 @@ const send = createReducer({
 
 const receive = createReducer({
   [chatActions.ReceiveMessage]: (state, payload) => {
+    const { messages } = state
+    messages.push(
+        {
+          message: payload.message.message,
+          type: "in",
+          time: moment().format("h:mm:ss")
+        }
+    )
+
     return { ...state,
       isFetching: true,
       error: false,
-      message: payload.message,
+      messages,
       payload: payload
     }
   }
