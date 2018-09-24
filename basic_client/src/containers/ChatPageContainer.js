@@ -10,14 +10,14 @@ class ChatPage extends Component {
   constructor(props){
     super(props)
     this.state = {
-      message: null
+      message: ""
     }
   }
   sendMessage = e => {
     e.preventDefault()
     const { message } = this.state
+    this.setState({message: ""})
     this.props.actions.chat.SendMessage({ message: message })
-    this.setState({message: null})
   }
   onChangeInputMessage = e => {
     this.setState({message: e.target.value})
@@ -27,12 +27,14 @@ class ChatPage extends Component {
   }
   render() {
     const { connected, send, receive } = this.props
+    const { message } = this.state
 
     return (
       <ChatPageComponent
         onSubmit= { this.sendMessage }
         receive={receive}
         send={send}
+        message={message}
         connected={connected}
         onChangeInputMessage={this.onChangeInputMessage} />
     )

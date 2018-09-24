@@ -4,14 +4,14 @@ import React, { Component } from 'react'
 import styles from './ChatPage.css'
 
 
-const ChatPage = ({connected, onSubmit, onChangeInputMessage, send, receive}) => {
+const ChatPage = ({connected, onSubmit, onChangeInputMessage, send, receive, message}) => {
   return (
     <div className="ChatPage">
       <form onSubmit={ onSubmit }>
         <ConnectionStatusControl connected={connected} />
         <HistoryMessages send={send} receive={receive} />
         <br />
-        <input onChange = { (e) => onChangeInputMessage(e) } />
+        <input value={message} onChange = { (e) => onChangeInputMessage(e) } />
         <input type="submit" />
       </form>
     </div>
@@ -23,6 +23,12 @@ const HistoryMessages = ({ send, receive }) => {
   const { messages: receivedMessages } = receive
 
   const HistoryDataMessages = sendMessages.concat(receivedMessages)
+    .sort((a, b) => a.time < b.time )
+
+
+  //const blogPosts = HistoryDataMessages
+
+
 
   return (
     <dl className={styles.ChatPage__HistoryMessages}>
@@ -31,6 +37,8 @@ const HistoryMessages = ({ send, receive }) => {
           return (
             <dt key={index}>
               <h5>
+                others:
+                {" "}
                 {item.message}
               </h5>
             </dt>
@@ -39,6 +47,8 @@ const HistoryMessages = ({ send, receive }) => {
           return (
             <dd key={index}>
               <h5>
+                me:
+                {" "}
                 {item.message}
               </h5>
             </dd>
