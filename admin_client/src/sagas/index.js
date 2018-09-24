@@ -15,65 +15,6 @@ socket.on('news', function (data) {
   socket.emit('my other event', { my: 'data' })
 });*/
 
-function* connect() {
-  var socket = io('/')
-  console.log()
-  //const socket = io('ws://localhost/')
-  //const socket = io('http://localhost:815/ssss')
-  //console.log("david")
-  return new Promise(resolve => {
-    //resolve(socket);
-    alert("here I am")
-    try{
-    alert("here I amxxx ")
-
-      socket.on('connect', function() {
-        alert("ssssstt")
-        resolve(socket);
-      })
-    alert("here I amxxx123 ")
-    }catch(ex){
-      alert("sssss errorrrrr")
-      console.log("errrorrrrr.......")
-      console.log(ex)
-    }
-  })
-}
-
-function subscribe(socket) {
-  return eventChannel(emit => {
-    socket.on('news', (data) => {
-      alert("disss")
-      //emit(addUser({ username }));
-    })
-    socket.on('disconnect', e => {
-      alert("disss")
-      // TODO: handle
-    });
-    return () => {};
-  });
-}
-
-function* read(socket) {
-  const channel = yield call(subscribe, socket);
-  while (true) {
-    let action = yield take(channel);
-    yield put(action);
-  }
-}
-
-function* write(socket) {
-  while (true) {
-    const { payload } = yield take(`${sendMessage}`);
-    socket.emit('message', payload);
-  }
-}
-
-function* handleIO(socket) {
-  alert("ssss")
-  yield fork(read, socket);
-  yield fork(write, socket);
-}
 
 export function* authFlow() {
   while(true){
@@ -83,10 +24,10 @@ export function* authFlow() {
       yield fork(logoutFlow)
 
       //alert("ssssaaaaastrabbxxxx")
-      const socket = yield call(connect)
+      //const socket = yield call(connect)
       //alert("ssssaaaaastra")
 
-      const task = yield fork(handleIO, socket)
+      //const task = yield fork(handleIO, socket)
       //socket.emit('ping', { username: payload.username })
       //socket.emit('login', { username: payload.username })
 

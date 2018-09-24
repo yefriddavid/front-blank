@@ -24,8 +24,8 @@ services:
     volumes:
       - ../api:/app
 
-  webapp:
-    container_name: webapp
+  webadmin:
+    container_name: webadmin
     image: node:8.11.4
     working_dir: /app
     environment:
@@ -34,7 +34,19 @@ services:
       - yarn
       - start
     volumes:
-      - ../basic_client:/app
+      - ../admin_client:/app
+
+  webchat:
+    container_name: webchat
+    image: node:8.11.4
+    working_dir: /app
+    environment:
+      PORT: 80
+    command:
+      - yarn
+      - start
+    volumes:
+      - ../chat_client:/app
 
   websocket:
     container_name: websocket
