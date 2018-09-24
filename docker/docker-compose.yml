@@ -34,7 +34,7 @@ services:
       - yarn
       - start
     volumes:
-      - ../client:/app
+      - ../basic_client:/app
 
   websocket:
     container_name: websocket

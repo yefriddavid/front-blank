@@ -1,0 +1,20 @@
+.ChatPage {
+
+}
+
+.ChatPage__Head {
+
+}
+
+.ChatPage__Head--text {
+
+}
+
+
+.ChatPage__HistoryMessages {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}

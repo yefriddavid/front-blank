@@ -20,13 +20,25 @@ router.get('/', (req, res) => {
 app.use('/api', router)
 server.listen(port)
 
+const clients = []
+
 io.on('connection', function (socket) {
-  console.log("Everybody it is connected")
-  socket.emit('news', { hello: 'world' });
+  clients.push(socket)
+  //socket.emit('news', { hello: 'world' })
+  socket.emit('connectChatSuccesful', { ok: 'ok' })
   socket.on('ping', function (data) {
-    console.log("anybody make ping")
+    console.log("ping received")
+  })
+
+  socket.on('addNewMessage', function (data) {
+    clients.map((client, index) => {
+      //console.log(client)
+      if(client.id !== socket.id)
+        client.emit('newReceiveMessage', data)
+    })
+    socket.emit('confirmAddNewMessageReceived', { ok: 'ok' })
     console.log(data)
-  });
+  })
 });
 
 
